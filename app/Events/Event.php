@@ -1,6 +1,6 @@
 <?php
 
-namespace labtectoluca\Events;
+namespace App\Events;
 
 abstract class Event
 {

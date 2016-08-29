@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => labtectoluca\User::class,
+    'model' => App\User::class,
 
     /*
     |--------------------------------------------------------------------------
