@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class ResourceSection extends Model
 {
-    protected $table = 'sections';
+    protected $table = 'resource_sections';
 }

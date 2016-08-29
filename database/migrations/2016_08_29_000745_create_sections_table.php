@@ -19,9 +19,9 @@ class CreateSectionsTable extends Migration
             $table->string('description');
             $table->date('start_date');
             $table->date('end_date');
-            $table->integer('id_course')->unsigned();
-            $table->foreign('id_course')->referenreces('id')->on('courses');
             $table->char('status', 1);
+            $table->integer('id_course')->unsigned();
+            $table->foreign('id_course')->references('id')->on('courses');
             
         });
     }

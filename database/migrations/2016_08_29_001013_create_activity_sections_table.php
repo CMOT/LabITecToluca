@@ -22,7 +22,7 @@ class CreateActivitySectionsTable extends Migration
             $table->integer('id_section')->unsigned();
             $table->foreign('id_section')->references('id')->on('sections');
             $table->integer('id_student')->unsigned();
-            $table->foreign('id_student')->references('id')->on('course');
+            $table->foreign('id_student')->references('id')->on('users');
             $table->char('status', 1);
         });
     }

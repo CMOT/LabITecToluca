@@ -17,12 +17,10 @@ class CreatePracticeSectionsTable extends Migration
             $table->timestamps();
             $table->timestamp('active_date');
             $table->timestamp('desactive_date');
-            $table->integer('id_practice')->unsigned();
-            $table->foreign('id_practice')->references('id')->on('practices');
             $table->integer('id_section')->unsigned();
             $table->foreign('id_section')->references('id')->on('sections');
             $table->integer('id_student')->unsigned();
-            $table->foreign('id_student')->references('id')->on('course');
+            $table->foreign('id_student')->references('id')->on('users');
             $table->integer('id_practice_detail')->unsigned();
             $table->foreign('id_practice_detail')->references('id')->on('practice_details');
             $table->char('status', 1);
