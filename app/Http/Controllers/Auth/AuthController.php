@@ -1,10 +1,10 @@
 <?php
 
-namespace labtectoluca\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use labtectoluca\User;
+use App\User;
 use Validator;
-use labtectoluca\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
