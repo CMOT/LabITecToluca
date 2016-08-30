@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'd1401fc9326b4a45a881c69d7acf9f2d'),
+    'key' => env('APP_KEY', '467b48b0118e4113896ed4f2d2a717c1'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -140,10 +140,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        labtectoluca\Providers\AppServiceProvider::class,
+        labtectoluca\Providers\AuthServiceProvider::class,
+        labtectoluca\Providers\EventServiceProvider::class,
+        labtectoluca\Providers\RouteServiceProvider::class,
 
     ],
 
