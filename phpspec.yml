@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: labtectoluca
-        psr4_prefix: labtectoluca
-        src_path: app
