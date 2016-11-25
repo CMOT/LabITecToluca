@@ -1,0 +1,1492 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-30ryxd');
+	src:url('fonts/icomoon.eot?#iefix-30ryxd') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?-30ryxd') format('truetype'),
+		url('fonts/icomoon.woff?-30ryxd') format('woff'),
+		url('fonts/icomoon.svg?-30ryxd#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat:before {
+	content: "\e600";
+}
+.icon-chat-alt-stroke:before {
+	content: "\e601";
+}
+.icon-chat-alt-fill:before {
+	content: "\e602";
+}
+.icon-comment-alt1-stroke:before {
+	content: "\e603";
+}
+.icon-comment:before {
+	content: "\e604";
+}
+.icon-comment-stroke:before {
+	content: "\e605";
+}
+.icon-comment-fill:before {
+	content: "\e606";
+}
+.icon-comment-alt2-stroke:before {
+	content: "\e607";
+}
+.icon-comment-alt2-fill:before {
+	content: "\e608";
+}
+.icon-checkmark:before {
+	content: "\e609";
+}
+.icon-check-alt:before {
+	content: "\e60a";
+}
+.icon-x:before {
+	content: "\e60b";
+}
+.icon-x-altx-alt:before {
+	content: "\e60c";
+}
+.icon-denied:before {
+	content: "\e60d";
+}
+.icon-cursor:before {
+	content: "\e60e";
+}
+.icon-rss:before {
+	content: "\e60f";
+}
+.icon-rss-alt:before {
+	content: "\e610";
+}
+.icon-wrench:before {
+	content: "\e611";
+}
+.icon-dial:before {
+	content: "\e612";
+}
+.icon-cog:before {
+	content: "\e613";
+}
+.icon-calendar:before {
+	content: "\e614";
+}
+.icon-calendar-alt-stroke:before {
+	content: "\e615";
+}
+.icon-calendar-alt-fill:before {
+	content: "\e616";
+}
+.icon-share:before {
+	content: "\e617";
+}
+.icon-mail:before {
+	content: "\e618";
+}
+.icon-heart-stroke:before {
+	content: "\e619";
+}
+.icon-heart-fill:before {
+	content: "\e61a";
+}
+.icon-movie:before {
+	content: "\e61b";
+}
+.icon-document-alt-stroke:before {
+	content: "\e61c";
+}
+.icon-document-alt-fill:before {
+	content: "\e61d";
+}
+.icon-document-stroke:before {
+	content: "\e61e";
+}
+.icon-document-fill:before {
+	content: "\e61f";
+}
+.icon-plus:before {
+	content: "\e620";
+}
+.icon-plus-alt:before {
+	content: "\e621";
+}
+.icon-minus:before {
+	content: "\e622";
+}
+.icon-minus-alt:before {
+	content: "\e623";
+}
+.icon-pin:before {
+	content: "\e624";
+}
+.icon-link:before {
+	content: "\e625";
+}
+.icon-bolt:before {
+	content: "\e626";
+}
+.icon-move:before {
+	content: "\e627";
+}
+.icon-move-alt1:before {
+	content: "\e628";
+}
+.icon-move-alt2:before {
+	content: "\e629";
+}
+.icon-equalizer:before {
+	content: "\e62a";
+}
+.icon-award-fill:before {
+	content: "\e62b";
+}
+.icon-award-stroke:before {
+	content: "\e62c";
+}
+.icon-magnifying-glass:before {
+	content: "\e62d";
+}
+.icon-trash-stroke:before {
+	content: "\e62e";
+}
+.icon-trash-fill:before {
+	content: "\e62f";
+}
+.icon-beaker-alt:before {
+	content: "\e630";
+}
+.icon-beaker:before {
+	content: "\e631";
+}
+.icon-key-stroke:before {
+	content: "\e632";
+}
+.icon-key-fill:before {
+	content: "\e633";
+}
+.icon-new-window:before {
+	content: "\e634";
+}
+.icon-lightbulb:before {
+	content: "\e635";
+}
+.icon-spin-alt:before {
+	content: "\e636";
+}
+.icon-spin:before {
+	content: "\e637";
+}
+.icon-curved-arrow:before {
+	content: "\e638";
+}
+.icon-undo:before {
+	content: "\e639";
+}
+.icon-reload:before {
+	content: "\e63a";
+}
+.icon-reload-alt:before {
+	content: "\e63b";
+}
+.icon-loop:before {
+	content: "\e63c";
+}
+.icon-loop-alt1:before {
+	content: "\e63d";
+}
+.icon-loop-alt2:before {
+	content: "\e63e";
+}
+.icon-loop-alt3:before {
+	content: "\e63f";
+}
+.icon-loop-alt4:before {
+	content: "\e640";
+}
+.icon-transfer:before {
+	content: "\e641";
+}
+.icon-move-vertical:before {
+	content: "\e642";
+}
+.icon-move-vertical-alt1:before {
+	content: "\e643";
+}
+.icon-move-vertical-alt2:before {
+	content: "\e644";
+}
+.icon-move-horizontal:before {
+	content: "\e645";
+}
+.icon-move-horizontal-alt1:before {
+	content: "\e646";
+}
+.icon-move-horizontal-alt2:before {
+	content: "\e647";
+}
+.icon-arrow-left:before {
+	content: "\e648";
+}
+.icon-arrow-left-alt1:before {
+	content: "\e649";
+}
+.icon-arrow-left-alt2:before {
+	content: "\e64a";
+}
+.icon-arrow-right:before {
+	content: "\e64b";
+}
+.icon-arrow-right-alt1:before {
+	content: "\e64c";
+}
+.icon-arrow-right-alt2:before {
+	content: "\e64d";
+}
+.icon-arrow-up:before {
+	content: "\e64e";
+}
+.icon-arrow-up-alt1:before {
+	content: "\e64f";
+}
+.icon-arrow-up-alt2:before {
+	content: "\e650";
+}
+.icon-arrow-down:before {
+	content: "\e651";
+}
+.icon-arrow-down-alt1:before {
+	content: "\e652";
+}
+.icon-arrow-down-alt2:before {
+	content: "\e653";
+}
+.icon-cd:before {
+	content: "\e654";
+}
+.icon-steering-wheel:before {
+	content: "\e655";
+}
+.icon-microphone:before {
+	content: "\e656";
+}
+.icon-headphones:before {
+	content: "\e657";
+}
+.icon-volume:before {
+	content: "\e658";
+}
+.icon-volume-mute:before {
+	content: "\e659";
+}
+.icon-play:before {
+	content: "\e65a";
+}
+.icon-pause:before {
+	content: "\e65b";
+}
+.icon-stop:before {
+	content: "\e65c";
+}
+.icon-eject:before {
+	content: "\e65d";
+}
+.icon-first:before {
+	content: "\e65e";
+}
+.icon-last:before {
+	content: "\e65f";
+}
+.icon-play-alt:before {
+	content: "\e660";
+}
+.icon-fullscreen-exit:before {
+	content: "\e661";
+}
+.icon-fullscreen-exit-alt:before {
+	content: "\e662";
+}
+.icon-fullscreen:before {
+	content: "\e663";
+}
+.icon-fullscreen-alt:before {
+	content: "\e664";
+}
+.icon-iphone:before {
+	content: "\e665";
+}
+.icon-battery-empty:before {
+	content: "\e666";
+}
+.icon-battery-half:before {
+	content: "\e667";
+}
+.icon-battery-full:before {
+	content: "\e668";
+}
+.icon-battery-charging:before {
+	content: "\e669";
+}
+.icon-compass:before {
+	content: "\e66a";
+}
+.icon-box:before {
+	content: "\e66b";
+}
+.icon-folder-stroke:before {
+	content: "\e66c";
+}
+.icon-folder-fill:before {
+	content: "\e66d";
+}
+.icon-at:before {
+	content: "\e66e";
+}
+.icon-ampersand:before {
+	content: "\e66f";
+}
+.icon-info:before {
+	content: "\e670";
+}
+.icon-question-mark:before {
+	content: "\e671";
+}
+.icon-pilcrow:before {
+	content: "\e672";
+}
+.icon-hash:before {
+	content: "\e673";
+}
+.icon-left-quote:before {
+	content: "\e674";
+}
+.icon-right-quote:before {
+	content: "\e675";
+}
+.icon-left-quote-alt:before {
+	content: "\e676";
+}
+.icon-right-quote-alt:before {
+	content: "\e677";
+}
+.icon-article:before {
+	content: "\e678";
+}
+.icon-read-more:before {
+	content: "\e679";
+}
+.icon-list:before {
+	content: "\e67a";
+}
+.icon-list-nested:before {
+	content: "\e67b";
+}
+.icon-book:before {
+	content: "\e67c";
+}
+.icon-book-alt:before {
+	content: "\e67d";
+}
+.icon-book-alt2:before {
+	content: "\e67e";
+}
+.icon-pen:before {
+	content: "\e67f";
+}
+.icon-pen-alt-stroke:before {
+	content: "\e680";
+}
+.icon-pen-alt-fill:before {
+	content: "\e681";
+}
+.icon-pen-alt2:before {
+	content: "\e682";
+}
+.icon-brush:before {
+	content: "\e683";
+}
+.icon-brush-alt:before {
+	content: "\e684";
+}
+.icon-eyedropper:before {
+	content: "\e685";
+}
+.icon-layers-alt:before {
+	content: "\e686";
+}
+.icon-layers:before {
+	content: "\e687";
+}
+.icon-image:before {
+	content: "\e688";
+}
+.icon-camera:before {
+	content: "\e689";
+}
+.icon-aperture:before {
+	content: "\e68a";
+}
+.icon-aperture-alt:before {
+	content: "\e68b";
+}
+.icon-chart:before {
+	content: "\e68c";
+}
+.icon-chart-alt:before {
+	content: "\e68d";
+}
+.icon-bars:before {
+	content: "\e68e";
+}
+.icon-bars-alt:before {
+	content: "\e68f";
+}
+.icon-eye:before {
+	content: "\e690";
+}
+.icon-user:before {
+	content: "\e691";
+}
+.icon-home:before {
+	content: "\e692";
+}
+.icon-clock:before {
+	content: "\e693";
+}
+.icon-lock-stroke:before {
+	content: "\e694";
+}
+.icon-lock-fill:before {
+	content: "\e695";
+}
+.icon-unlock-stroke:before {
+	content: "\e696";
+}
+.icon-unlock-fill:before {
+	content: "\e697";
+}
+.icon-tag-stroke:before {
+	content: "\e698";
+}
+.icon-tag-fill:before {
+	content: "\e699";
+}
+.icon-sun-stroke:before {
+	content: "\e69a";
+}
+.icon-sun-fill:before {
+	content: "\e69b";
+}
+.icon-moon-stroke:before {
+	content: "\e69c";
+}
+.icon-moon-fill:before {
+	content: "\e69d";
+}
+.icon-cloud:before {
+	content: "\e69e";
+}
+.icon-rain:before {
+	content: "\e69f";
+}
+.icon-umbrella:before {
+	content: "\e6a0";
+}
+.icon-star:before {
+	content: "\e6a1";
+}
+.icon-map-pin-stroke:before {
+	content: "\e6a2";
+}
+.icon-map-pin-fill:before {
+	content: "\e6a3";
+}
+.icon-map-pin-alt:before {
+	content: "\e6a4";
+}
+.icon-target:before {
+	content: "\e6a5";
+}
+.icon-download:before {
+	content: "\e6a6";
+}
+.icon-upload:before {
+	content: "\e6a7";
+}
+.icon-cloud-download:before {
+	content: "\e6a8";
+}
+.icon-cloud-upload:before {
+	content: "\e6a9";
+}
+.icon-fork:before {
+	content: "\e6aa";
+}
+.icon-paperclip:before {
+	content: "\e6ab";
+}
+.icon-alert:before {
+	content: "\f02d";
+}
+.icon-alignment-align:before {
+	content: "\f08a";
+}
+.icon-alignment-aligned-to:before {
+	content: "\f08e";
+}
+.icon-alignment-unalign:before {
+	content: "\f08b";
+}
+.icon-arrow-down2:before {
+	content: "\f03f";
+}
+.icon-arrow-left2:before {
+	content: "\f040";
+}
+.icon-arrow-right2:before {
+	content: "\f03e";
+}
+.icon-arrow-small-down:before {
+	content: "\f0a0";
+}
+.icon-arrow-small-left:before {
+	content: "\f0a1";
+}
+.icon-arrow-small-right:before {
+	content: "\f071";
+}
+.icon-arrow-small-up:before {
+	content: "\f09f";
+}
+.icon-arrow-up2:before {
+	content: "\f03d";
+}
+.icon-beer:before {
+	content: "\f069";
+}
+.icon-book2:before {
+	content: "\f007";
+}
+.icon-bookmark:before {
+	content: "\f07b";
+}
+.icon-briefcase:before {
+	content: "\f0d3";
+}
+.icon-broadcast:before {
+	content: "\f048";
+}
+.icon-browser:before {
+	content: "\f0c5";
+}
+.icon-bug:before {
+	content: "\f091";
+}
+.icon-calendar2:before {
+	content: "\f068";
+}
+.icon-check:before {
+	content: "\f03a";
+}
+.icon-checklist:before {
+	content: "\f076";
+}
+.icon-chevron-down:before {
+	content: "\f0a3";
+}
+.icon-chevron-left:before {
+	content: "\f0a4";
+}
+.icon-chevron-right:before {
+	content: "\f078";
+}
+.icon-chevron-up:before {
+	content: "\f0a2";
+}
+.icon-circle-slash:before {
+	content: "\f084";
+}
+.icon-circuit-board:before {
+	content: "\f0d6";
+}
+.icon-clippy:before {
+	content: "\f035";
+}
+.icon-clock2:before {
+	content: "\f046";
+}
+.icon-cloud-download2:before {
+	content: "\f00b";
+}
+.icon-cloud-upload2:before {
+	content: "\f00c";
+}
+.icon-code:before {
+	content: "\f05f";
+}
+.icon-color-mode:before {
+	content: "\f065";
+}
+.icon-comment2:before {
+	content: "\f02b";
+}
+.icon-comment-discussion:before {
+	content: "\f04f";
+}
+.icon-credit-card:before {
+	content: "\f045";
+}
+.icon-dash:before {
+	content: "\f0ca";
+}
+.icon-dashboard:before {
+	content: "\f07d";
+}
+.icon-database:before {
+	content: "\f096";
+}
+.icon-device-camera:before {
+	content: "\f056";
+}
+.icon-device-camera-video:before {
+	content: "\f057";
+}
+.icon-device-desktop:before {
+	content: "\f27c";
+}
+.icon-device-mobile:before {
+	content: "\f038";
+}
+.icon-diff:before {
+	content: "\f04d";
+}
+.icon-diff-added:before {
+	content: "\f06b";
+}
+.icon-diff-ignored:before {
+	content: "\f099";
+}
+.icon-diff-modified:before {
+	content: "\f06d";
+}
+.icon-diff-removed:before {
+	content: "\f06c";
+}
+.icon-diff-renamed:before {
+	content: "\f06e";
+}
+.icon-ellipsis:before {
+	content: "\f09a";
+}
+.icon-eye2:before {
+	content: "\f04e";
+}
+.icon-file-binary:before {
+	content: "\f094";
+}
+.icon-file-code:before {
+	content: "\f010";
+}
+.icon-file-directory:before {
+	content: "\f016";
+}
+.icon-file-media:before {
+	content: "\f012";
+}
+.icon-file-pdf:before {
+	content: "\f014";
+}
+.icon-file-submodule:before {
+	content: "\f017";
+}
+.icon-file-symlink-directory:before {
+	content: "\f0b1";
+}
+.icon-file-symlink-file:before {
+	content: "\f0b0";
+}
+.icon-file-text:before {
+	content: "\f011";
+}
+.icon-file-zip:before {
+	content: "\f013";
+}
+.icon-flame:before {
+	content: "\f0d2";
+}
+.icon-fold:before {
+	content: "\f0cc";
+}
+.icon-gear:before {
+	content: "\f02f";
+}
+.icon-gift:before {
+	content: "\f042";
+}
+.icon-gist:before {
+	content: "\f00e";
+}
+.icon-gist-secret:before {
+	content: "\f08c";
+}
+.icon-git-branch:before {
+	content: "\f020";
+}
+.icon-git-commit:before {
+	content: "\f01f";
+}
+.icon-git-compare:before {
+	content: "\f0ac";
+}
+.icon-git-merge:before {
+	content: "\f023";
+}
+.icon-git-pull-request:before {
+	content: "\f009";
+}
+.icon-globe:before {
+	content: "\f0b6";
+}
+.icon-graph:before {
+	content: "\f043";
+}
+.icon-heart:before {
+	content: "\2665";
+}
+.icon-history:before {
+	content: "\f07e";
+}
+.icon-home2:before {
+	content: "\f08d";
+}
+.icon-horizontal-rule:before {
+	content: "\f070";
+}
+.icon-hourglass:before {
+	content: "\f09e";
+}
+.icon-hubot:before {
+	content: "\f09d";
+}
+.icon-inbox:before {
+	content: "\f0cf";
+}
+.icon-info2:before {
+	content: "\f059";
+}
+.icon-issue-closed:before {
+	content: "\f028";
+}
+.icon-issue-opened:before {
+	content: "\f026";
+}
+.icon-issue-reopened:before {
+	content: "\f027";
+}
+.icon-jersey:before {
+	content: "\f019";
+}
+.icon-jump-down:before {
+	content: "\f072";
+}
+.icon-jump-left:before {
+	content: "\f0a5";
+}
+.icon-jump-right:before {
+	content: "\f0a6";
+}
+.icon-jump-up:before {
+	content: "\f073";
+}
+.icon-key:before {
+	content: "\f049";
+}
+.icon-keyboard:before {
+	content: "\f00d";
+}
+.icon-law:before {
+	content: "\f0d8";
+}
+.icon-light-bulb:before {
+	content: "\f000";
+}
+.icon-link2:before {
+	content: "\f05c";
+}
+.icon-link-external:before {
+	content: "\f07f";
+}
+.icon-list-ordered:before {
+	content: "\f062";
+}
+.icon-list-unordered:before {
+	content: "\f061";
+}
+.icon-location:before {
+	content: "\f060";
+}
+.icon-lock:before {
+	content: "\f06a";
+}
+.icon-logo-github:before {
+	content: "\f092";
+}
+.icon-mail2:before {
+	content: "\f03b";
+}
+.icon-mail-read:before {
+	content: "\f03c";
+}
+.icon-mail-reply:before {
+	content: "\f051";
+}
+.icon-mark-github:before {
+	content: "\f00a";
+}
+.icon-markdown:before {
+	content: "\f0c9";
+}
+.icon-megaphone:before {
+	content: "\f077";
+}
+.icon-mention:before {
+	content: "\f0be";
+}
+.icon-microscope:before {
+	content: "\f089";
+}
+.icon-milestone:before {
+	content: "\f075";
+}
+.icon-mirror:before {
+	content: "\f024";
+}
+.icon-mortar-board:before {
+	content: "\f0d7";
+}
+.icon-move-down:before {
+	content: "\f0a8";
+}
+.icon-move-left:before {
+	content: "\f074";
+}
+.icon-move-right:before {
+	content: "\f0a9";
+}
+.icon-move-up:before {
+	content: "\f0a7";
+}
+.icon-mute:before {
+	content: "\f080";
+}
+.icon-no-newline:before {
+	content: "\f09c";
+}
+.icon-octoface:before {
+	content: "\f008";
+}
+.icon-organization:before {
+	content: "\f037";
+}
+.icon-package:before {
+	content: "\f0c4";
+}
+.icon-paintcan:before {
+	content: "\f0d1";
+}
+.icon-pencil:before {
+	content: "\f058";
+}
+.icon-person:before {
+	content: "\f018";
+}
+.icon-pin2:before {
+	content: "\f041";
+}
+.icon-playback-fast-forward:before {
+	content: "\f0bd";
+}
+.icon-playback-pause:before {
+	content: "\f0bb";
+}
+.icon-playback-play:before {
+	content: "\f0bf";
+}
+.icon-playback-rewind:before {
+	content: "\f0bc";
+}
+.icon-plug:before {
+	content: "\f0d4";
+}
+.icon-plus2:before {
+	content: "\f05d";
+}
+.icon-podium:before {
+	content: "\f0af";
+}
+.icon-primitive-dot:before {
+	content: "\f052";
+}
+.icon-primitive-square:before {
+	content: "\f053";
+}
+.icon-pulse:before {
+	content: "\f085";
+}
+.icon-puzzle:before {
+	content: "\f0c0";
+}
+.icon-question:before {
+	content: "\f02c";
+}
+.icon-quote:before {
+	content: "\f063";
+}
+.icon-radio-tower:before {
+	content: "\f030";
+}
+.icon-repo:before {
+	content: "\f001";
+}
+.icon-repo-clone:before {
+	content: "\f04c";
+}
+.icon-repo-force-push:before {
+	content: "\f04a";
+}
+.icon-repo-forked:before {
+	content: "\f002";
+}
+.icon-repo-pull:before {
+	content: "\f006";
+}
+.icon-repo-push:before {
+	content: "\f005";
+}
+.icon-rocket:before {
+	content: "\f033";
+}
+.icon-rss2:before {
+	content: "\f034";
+}
+.icon-ruby:before {
+	content: "\f047";
+}
+.icon-screen-full:before {
+	content: "\f066";
+}
+.icon-screen-normal:before {
+	content: "\f067";
+}
+.icon-search:before {
+	content: "\f02e";
+}
+.icon-server:before {
+	content: "\f097";
+}
+.icon-settings:before {
+	content: "\f07c";
+}
+.icon-sign-in:before {
+	content: "\f036";
+}
+.icon-sign-out:before {
+	content: "\f032";
+}
+.icon-split:before {
+	content: "\f0c6";
+}
+.icon-squirrel:before {
+	content: "\f0b2";
+}
+.icon-star2:before {
+	content: "\f02a";
+}
+.icon-steps:before {
+	content: "\f0c7";
+}
+.icon-stop2:before {
+	content: "\f08f";
+}
+.icon-sync:before {
+	content: "\f087";
+}
+.icon-tag:before {
+	content: "\f015";
+}
+.icon-telescope:before {
+	content: "\f088";
+}
+.icon-terminal:before {
+	content: "\f0c8";
+}
+.icon-three-bars:before {
+	content: "\f05e";
+}
+.icon-tools:before {
+	content: "\f031";
+}
+.icon-trashcan:before {
+	content: "\f0d0";
+}
+.icon-triangle-down:before {
+	content: "\f05b";
+}
+.icon-triangle-left:before {
+	content: "\f044";
+}
+.icon-triangle-right:before {
+	content: "\f05a";
+}
+.icon-triangle-up:before {
+	content: "\f0aa";
+}
+.icon-unfold:before {
+	content: "\f039";
+}
+.icon-unmute:before {
+	content: "\f0ba";
+}
+.icon-versions:before {
+	content: "\f064";
+}
+.icon-x2:before {
+	content: "\f081";
+}
+.icon-zap:before {
+	content: "\26a1";
+}
+.icon-type:before {
+	content: "\e6ac";
+}
+.icon-box2:before {
+	content: "\e6ad";
+}
+.icon-archive:before {
+	content: "\e6ae";
+}
+.icon-envelope:before {
+	content: "\e6af";
+}
+.icon-email:before {
+	content: "\e6b0";
+}
+.icon-files:before {
+	content: "\e6b1";
+}
+.icon-uniE6B2:before {
+	content: "\e6b2";
+}
+.icon-file-settings:before {
+	content: "\e6b3";
+}
+.icon-file-add:before {
+	content: "\e6b4";
+}
+.icon-file:before {
+	content: "\e6b5";
+}
+.icon-align-left:before {
+	content: "\e6b6";
+}
+.icon-align-right:before {
+	content: "\e6b7";
+}
+.icon-align-center:before {
+	content: "\e6b8";
+}
+.icon-align-justify:before {
+	content: "\e6b9";
+}
+.icon-file-broken:before {
+	content: "\e6ba";
+}
+.icon-browser2:before {
+	content: "\e6bb";
+}
+.icon-windows:before {
+	content: "\e6bc";
+}
+.icon-window:before {
+	content: "\e6bd";
+}
+.icon-folder:before {
+	content: "\e6be";
+}
+.icon-folder-add:before {
+	content: "\e6bf";
+}
+.icon-folder-settings:before {
+	content: "\e6c0";
+}
+.icon-folder-check:before {
+	content: "\e6c1";
+}
+.icon-wifi-low:before {
+	content: "\e6c2";
+}
+.icon-wifi-mid:before {
+	content: "\e6c3";
+}
+.icon-wifi-full:before {
+	content: "\e6c4";
+}
+.icon-connection-empty:before {
+	content: "\e6c5";
+}
+.icon-connection-25:before {
+	content: "\e6c6";
+}
+.icon-connection-50:before {
+	content: "\e6c7";
+}
+.icon-connection-75:before {
+	content: "\e6c8";
+}
+.icon-connection-full:before {
+	content: "\e6c9";
+}
+.icon-list2:before {
+	content: "\e6ca";
+}
+.icon-grid:before {
+	content: "\e6cb";
+}
+.icon-uniE6CC:before {
+	content: "\e6cc";
+}
+.icon-battery-charging2:before {
+	content: "\e6cd";
+}
+.icon-battery-empty2:before {
+	content: "\e6ce";
+}
+.icon-battery-25:before {
+	content: "\e6cf";
+}
+.icon-battery-50:before {
+	content: "\e6d0";
+}
+.icon-battery-75:before {
+	content: "\e6d1";
+}
+.icon-battery-full2:before {
+	content: "\e6d2";
+}
+.icon-settings2:before {
+	content: "\e6d3";
+}
+.icon-arrow-left3:before {
+	content: "\e6d4";
+}
+.icon-arrow-up3:before {
+	content: "\e6d5";
+}
+.icon-arrow-down3:before {
+	content: "\e6d6";
+}
+.icon-arrow-right3:before {
+	content: "\e6d7";
+}
+.icon-reload2:before {
+	content: "\e6d8";
+}
+.icon-refresh:before {
+	content: "\e6d9";
+}
+.icon-volume2:before {
+	content: "\e6da";
+}
+.icon-volume-increase:before {
+	content: "\e6db";
+}
+.icon-volume-decrease:before {
+	content: "\e6dc";
+}
+.icon-mute2:before {
+	content: "\e6dd";
+}
+.icon-microphone2:before {
+	content: "\e6de";
+}
+.icon-microphone-off:before {
+	content: "\e6df";
+}
+.icon-book3:before {
+	content: "\e6e0";
+}
+.icon-checkmark2:before {
+	content: "\e6e1";
+}
+.icon-checkbox-checked:before {
+	content: "\e6e2";
+}
+.icon-checkbox:before {
+	content: "\e6e3";
+}
+.icon-paperclip2:before {
+	content: "\e6e4";
+}
+.icon-download2:before {
+	content: "\e6e5";
+}
+.icon-tag2:before {
+	content: "\e6e6";
+}
+.icon-trashcan2:before {
+	content: "\e6e7";
+}
+.icon-search2:before {
+	content: "\e6e8";
+}
+.icon-zoomin:before {
+	content: "\e6e9";
+}
+.icon-zoomout:before {
+	content: "\e6ea";
+}
+.icon-chat2:before {
+	content: "\e6eb";
+}
+.icon-chat-1:before {
+	content: "\e6ec";
+}
+.icon-chat-2:before {
+	content: "\e6ed";
+}
+.icon-chat-3:before {
+	content: "\e6ee";
+}
+.icon-comment3:before {
+	content: "\e6ef";
+}
+.icon-calendar3:before {
+	content: "\e6f0";
+}
+.icon-bookmark2:before {
+	content: "\e6f1";
+}
+.icon-email2:before {
+	content: "\e6f2";
+}
+.icon-heart2:before {
+	content: "\e6f3";
+}
+.icon-enter:before {
+	content: "\e6f4";
+}
+.icon-cloud2:before {
+	content: "\e6f5";
+}
+.icon-book4:before {
+	content: "\e6f6";
+}
+.icon-star3:before {
+	content: "\e6f7";
+}
+.icon-clock3:before {
+	content: "\e6f8";
+}
+.icon-printer:before {
+	content: "\e6f9";
+}
+.icon-home3:before {
+	content: "\e6fa";
+}
+.icon-flag:before {
+	content: "\e6fb";
+}
+.icon-meter:before {
+	content: "\e6fc";
+}
+.icon-switch:before {
+	content: "\e6fd";
+}
+.icon-forbidden:before {
+	content: "\e6fe";
+}
+.icon-lock2:before {
+	content: "\e6ff";
+}
+.icon-unlocked:before {
+	content: "\e700";
+}
+.icon-unlocked2:before {
+	content: "\e701";
+}
+.icon-users:before {
+	content: "\e702";
+}
+.icon-user2:before {
+	content: "\e703";
+}
+.icon-users2:before {
+	content: "\e704";
+}
+.icon-user3:before {
+	content: "\e705";
+}
+.icon-bullhorn:before {
+	content: "\e706";
+}
+.icon-share2:before {
+	content: "\e707";
+}
+.icon-screen:before {
+	content: "\e708";
+}
+.icon-phone:before {
+	content: "\e709";
+}
+.icon-phone-portrait:before {
+	content: "\e70a";
+}
+.icon-phone-landscape:before {
+	content: "\e70b";
+}
+.icon-tablet:before {
+	content: "\e70c";
+}
+.icon-tablet-landscape:before {
+	content: "\e70d";
+}
+.icon-laptop:before {
+	content: "\e70e";
+}
+.icon-camera2:before {
+	content: "\e70f";
+}
+.icon-microwaveoven:before {
+	content: "\e710";
+}
+.icon-creditcards:before {
+	content: "\e711";
+}
+.icon-calculator:before {
+	content: "\e712";
+}
+.icon-bag:before {
+	content: "\e713";
+}
+.icon-diamond:before {
+	content: "\e714";
+}
+.icon-drink:before {
+	content: "\e715";
+}
+.icon-shorts:before {
+	content: "\e716";
+}
+.icon-vcard:before {
+	content: "\e717";
+}
+.icon-sun:before {
+	content: "\e718";
+}
+.icon-bill:before {
+	content: "\e719";
+}
+.icon-coffee:before {
+	content: "\e71a";
+}
+.icon-uniE71B:before {
+	content: "\e71b";
+}
+.icon-newspaper:before {
+	content: "\e71c";
+}
+.icon-stack:before {
+	content: "\e71d";
+}
+.icon-mapmarker:before {
+	content: "\e71e";
+}
+.icon-map:before {
+	content: "\e71f";
+}
+.icon-support:before {
+	content: "\e720";
+}
+.icon-uniE721:before {
+	content: "\e721";
+}
+.icon-barbell:before {
+	content: "\e722";
+}
+.icon-stopwatch:before {
+	content: "\e723";
+}
+.icon-atom:before {
+	content: "\e724";
+}
+.icon-syringe:before {
+	content: "\e725";
+}
+.icon-health:before {
+	content: "\e726";
+}
+.icon-bolt2:before {
+	content: "\e727";
+}
+.icon-pill:before {
+	content: "\e728";
+}
+.icon-bones:before {
+	content: "\e729";
+}
+.icon-lab:before {
+	content: "\e72a";
+}
+.icon-clipboard:before {
+	content: "\e72b";
+}
+.icon-mug:before {
+	content: "\e72c";
+}
+.icon-bucket:before {
+	content: "\e72d";
+}
+.icon-select:before {
+	content: "\e72e";
+}
+.icon-graph2:before {
+	content: "\e72f";
+}
+.icon-crop:before {
+	content: "\e730";
+}
+.icon-image2:before {
+	content: "\e731";
+}
+.icon-cube:before {
+	content: "\e732";
+}
+.icon-bars2:before {
+	content: "\e733";
+}
+.icon-chart2:before {
+	content: "\e734";
+}
+.icon-pencil2:before {
+	content: "\e735";
+}
+.icon-measure:before {
+	content: "\e736";
+}
+.icon-eyedropper2:before {
+	content: "\e737";
+}

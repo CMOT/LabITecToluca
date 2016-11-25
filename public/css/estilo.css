@@ -1,0 +1,205 @@
+#agregar {
+	
+    display: block;
+    text-decoration: none;
+    list-style: armenian;
+
+
+
+
+}
+#actual{
+
+
+    color: #fff;
+    
+
+
+}
+#listaactual{
+
+	
+    background-color: #337ab7;
+}
+.incompleto{
+
+	background: #FF8C76;
+	
+}
+.contenido{
+	margin-top: 4%;
+	margin-bottom: 4%;
+	margin-left: 4%;
+	width: 92%;
+	height: auto;
+	background: #FFFFFF;
+	border: 1px solid;
+  	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  	border-radius: 8px;
+
+}
+.columna_der{
+	float: right;
+	width: 39%;
+	height: auto;
+	background: #E9EAED;
+
+}
+.columna_izq{
+	float: left;
+	width: 60%;
+	height: auto;
+	background: #E9EAED;
+	margin-bottom: 5%;
+
+}
+.not{
+
+	display: inline-block;
+
+
+}
+.avisos{
+	margin-top: 30%;
+	width: 100%;
+
+}
+.anc{
+
+	height: 8px;
+	
+}
+.contenido_total{
+	width: 97%;
+	margin-left: 20px;
+	background: #E9EAED;
+}
+.titulo{
+
+	font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-weight: 100;
+	font-size: 16px;
+	color:#3b5998;
+	height: auto;
+	width:100%;
+	border: 1px solid;
+  	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  	border-radius: 3px;
+  	display: block;
+
+}
+.tit{
+
+	color: black;
+
+}
+.contenido img{
+
+	margin-top: 5px;
+	margin-left: 8px;
+
+}
+.contenido  p, h3{
+
+	margin-left: 8px;
+	margin-top: 5px;
+
+}
+.titulo_columna{
+
+	border: 3px solid;
+  	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  	border-radius: 3px;
+
+}
+.botones{
+
+	background: #337AB7;
+	color:white;
+	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+	padding-top: 3px;
+	padding-bottom: 3px;
+  	border-radius: 5px;
+  	
+}
+.opcion{
+
+	float: right;
+
+}
+.tablas{
+
+	background: #E9EAED;
+
+}
+.pie{
+
+	background: #2E2E2E;
+	position: relative;
+	top:200px;
+	height:auto;
+	color:white;
+}
+fij{
+
+	  position: absolute;
+	  width: 100%;
+	  z-index: 999;
+	  background-color: #5f5f5f;
+	  opacity: 0.98;
+	  height: 40px;
+	  position: fixed;
+  		top: 0;
+}
+body{
+	font-family: 'Segoe UI';
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+
+}
+.bloques{
+
+	display: inline-block;
+	
+	margin: 5px;
+	
+	background: #E9EAED;
+	
+}
+.izqui{
+
+	width: 48%;
+	
+	float: left;
+
+}
+.derec{
+
+	width: 49%;
+	background: #E9EAED;
+	padding-right: 6px;
+	float: right;
+	
+}
+.desplegar{
+	list-style: none;
+		
+ 	display: block;
+
+
+}
+.desplegar:hover{
+
+	text-decoration: none;
+
+
+}
+.desplegar > hr{
+	border: 0 none #0000000;
+	border-top: 1px solid #a39191;
+	margin: 2px;
+
+}
+
+
