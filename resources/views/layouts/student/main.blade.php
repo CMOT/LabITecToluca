@@ -11,6 +11,8 @@
         {!!Html::style('fonts/font1/style.css')!!}
         {!!Html::script('js/jquery.js')!!}
         {!!Html::script('js/bootstrap.js')!!}
+        {!!Html::style('js/datatables/media/css/jquery.dataTables.css')!!}
+        {!!Html::script('js/datatables/media/js/jquery.dataTables.js')!!}
     </head>
 
     <body>

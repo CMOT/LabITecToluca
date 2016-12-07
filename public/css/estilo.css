@@ -202,4 +202,15 @@ body{
 
 }
 
+.margen-general{
+    width: 80%;
+    margin:50px 3% ;
+    margin-left: 10%;
+}
 
+
+.dias > li{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}

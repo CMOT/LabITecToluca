@@ -11,6 +11,8 @@
         {!!Html::style('fonts/font1/style.css')!!}
         {!!Html::script('js/jquery.js')!!}
         {!!Html::script('js/bootstrap.js')!!}
+        {!!Html::style('js/datatables/media/css/jquery.dataTables.css')!!}
+        {!!Html::script('js/datatables/media/js/jquery.dataTables.js')!!}
 
     </head>
 
@@ -45,7 +47,7 @@
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                     </button>
-                                    <a href="../../index.php" class="navbar-brand"><span class="icon-home2"></span>Inicio</a>
+                                    <a href="/admin" class="navbar-brand"><span class="icon-home2"></span>Inicio</a>
                                 </div>
 
                                 <div class="collapse navbar-collapse" >

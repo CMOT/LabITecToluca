@@ -18,6 +18,8 @@
         {!!Html::style('fonts/font1/style.css')!!}
         {!!Html::script('js/jquery.js')!!}
         {!!Html::script('js/bootstrap.js')!!}
+        {!!Html::style('js/datatables/media/css/jquery.dataTables.css')!!}
+        {!!Html::script('js/datatables/media/js/jquery.dataTables.js')!!}
 
         <script>
             function goBack() {
@@ -37,8 +39,8 @@
                     <div class="row">
                         <ul id="menu1">
 
-                            <li><a href="../../php/cerrarSesion.php"><span class="icon-enter"></span> Cerrar sesi&oacute;n </a></li>
-                            <li><a href="../perfil.php?tipo=admin"> <span class="icon-user3"></span> {!!Auth::user()->name!!} </a></li>
+                            <li><a href="/logout"><span class="icon-enter"></span> Cerrar sesi&oacute;n </a></li>
+                            <li><a href=""> <span class="icon-user3"></span> {!!Auth::user()->name!!} </a></li>
 
                         </ul>
 
@@ -58,7 +60,7 @@
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                     </button>
-                                    <a href="../redireccion.php" class="navbar-brand"><span class="icon-home2"></span> Inicio</a>
+                                    <a href="/instructor" class="navbar-brand"><span class="icon-home2"></span> Inicio</a>
                                 </div>
 
                                 <div class="collapse navbar-collapse" >

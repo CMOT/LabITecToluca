@@ -5,7 +5,8 @@ namespace labtectoluca\Http\Controllers;
 use Session;
 use Redirect;
 use DB;
-//use labtectoluca\Http\Requests;
+use labtectoluca\Http\Requests;
+use labtectoluca\Http\Requests\UserUpdateRequest;
 use labtectoluca\Http\Requests\UserCreateRequest;
 use labtectoluca\Http\Controllers\Controller;
 use labtectoluca\User;
@@ -16,6 +17,8 @@ class UserController extends Controller
 {
     
     public function __construct() {
+        $this->middleware('auth');
+        $this->middleware('admin');
         $this->beforeFilter('@find', ['only' => ['edit','update', 'destroy']]);
     }
     
@@ -32,7 +35,7 @@ class UserController extends Controller
     {
         $users = User::all();
 //        $usr= \labtectoluca\User::with(['posts' => function($query)
-//{
+//
 //            $query->where('title', 'like', '%first%');
 //
 //        }])->get();
@@ -104,7 +107,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(UserUpdateRequest $request, $id)
     {
 //        $user= User::find($id);
         $this->user->fill($request->all());
@@ -123,10 +126,10 @@ class UserController extends Controller
     public function destroy($id)
     {
 //        $user  = User::find($id);
-        $this->user->status = 'D';
-//        $this->user->delete();
+//        $this->user->status = 'D';
+        $this->user->delete();
 //        $user->delete();
-        $this->user->save();
+//        $this->user->save();
         Session::flash('message', 'El usuario fue eliminado');
         return Redirect::to('/users');
     }

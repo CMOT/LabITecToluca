@@ -13,9 +13,6 @@
             <ul class="nav nav-pills nav-stacked">
 
                 <li > <a  href="/users"><span class="icon-user3"></span>Usuarios</a></li>
-                <ul  class="desplegar">
-                    <li><a href="/users/create">Alta de instructor</a></li>
-                </ul>
                 <li id="listaactual"> <a id="actual" href="/groups"><span  class="icon-organization"></span>Grupos</a></li>
                 <li> <a href="/practices"><span class="icon-steam"></span>Pr&aacute;cticas</a></li>
                 <li> <a href="#"><span class="icon-list5"></span>Temarios</a></li>

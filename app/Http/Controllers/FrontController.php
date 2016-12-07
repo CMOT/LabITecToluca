@@ -10,6 +10,10 @@ use labtectoluca\User;
 
 class FrontController extends Controller
 {
+    
+    public function __construct() {
+        $this->middleware('auth', ['only'=>'admin']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -21,7 +25,7 @@ class FrontController extends Controller
     }
 
    
-    public function contact()
+    public function admin()
     {
         return view('admin/index');
     }

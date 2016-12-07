@@ -28,7 +28,8 @@
         <div id="pantalla" class="col-xs-12 col-sm-8 col-md-10">			
             <br> <br> 
             <fieldset>
-                @include('alerts.success');
+                @include('alerts.success')
+                @include('alerts.breadcomb')
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -36,7 +37,7 @@
                     </div>
                     <div class="panel-body">
 
-                        <table class="table table-striped">
+                        <table id="table-users" class="table table-striped">
                             <thead>
                             <th>
                                 Numero de control:
@@ -60,7 +61,7 @@
                                     <td>
                                         {!!link_to_route('users.show', $title = 'Ver detalles', $parameters = $user->id, $attributes = ['class'=>'btn btn-info'])!!}
                                         {!!link_to_route('users.edit', $title = 'Editar', $parameters = $user->id, $attributes = ['class'=>'btn btn-warning'])!!}
-                                        {!!link_to_route('users.destroy', $title = 'Eliminar', $parameters = $user->id, $attributes = ['class'=>'btn btn-danger'])!!}
+                                        <!--{!!link_to_route('users.destroy', $title = 'Eliminar', $parameters = $user->id, $attributes = ['class'=>'btn btn-danger'])!!}-->
                                     </td>
                                 </tr>
                                 @endforeach
@@ -72,5 +73,10 @@
         </div>
     </section>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#table-users').DataTable();
+    });
+</script>
 @stop
 

@@ -1,29 +1,65 @@
 @extends('layouts.instructor.main')
 
 @section('content')
+    @include('alerts.breadcomb')
 <section class="menu row">
+    
     <section id="lista" class="col-xs-12 col-sm-4 col-md-9">
-        <ul>
-            <li id="agregar">
-                boton agregar usuario
-            </li >
-
-            <li id="agregar">
-                Ver curso boton
-            </li>
-
-        </ul>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>
+                        <h4>
+                        Nombre del curso
+                        </h4>
+                    </td>
+                    <td>
+                        <h4>
+                        Descripción del curso
+                        </h4>
+                    </td>
+                    <td>
+                        <h4>
+                        Detalle
+                        </h4>
+                    </td>
+                </tr>
+            </thead>
+        @foreach($courses as $course)
+        <tr>
+            <td>
+                   {{$course->title}}
+            </td>
+            <td>
+                    {{$course->description}}
+            </td>
+            <td>
+                    {!!link_to_route('instructor.course.show', $title = 'Ver detalle', $parameters = $course->id, $attributes = ['class'=>'btn btn-warning'])!!}
+            </td>
+        </tr>
+        @endforeach
+        </table>
         <br> <br> 
         <fieldset>
             <div class="tablas">
-                <h3>Alumnos <img src="../../imagenes/alumno.jpg" width="20px" height="20px"> </h3>
+                <h3>Alumnos del grupo <img src="../../imagenes/alumno.jpg" width="20px" height="20px"> </h3>
                 <table class="table table-bordered table-hover">
                     <thead>
                     <th>Nombre del alumno</th>
                     <th>Correo electr&oacute;nico</th>
                     <th>Detalles</th>
                     </thead>
-                    <h1> No hay alumnos en el grupo</h1>
+                    <tbody>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!--<h1> No hay alumnos en el grupo</h1>-->
                 </table>
             </div>
         </fieldset>

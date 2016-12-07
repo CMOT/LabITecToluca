@@ -6,7 +6,9 @@
             <name>LabTecToluca</name>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>endforeach</word>
             <word>foreach</word>
+            <word>Grupos</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

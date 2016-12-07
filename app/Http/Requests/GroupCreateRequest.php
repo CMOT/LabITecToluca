@@ -13,7 +13,7 @@ class GroupCreateRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class GroupCreateRequest extends Request
     public function rules()
     {
         return [
-            'title'=>'required',
+            'title'=>'required|unique:groups',
+            'subject'=>'required',
+            'quantity'=>'required',
         ];
     }
 }

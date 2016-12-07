@@ -11,10 +11,16 @@
 |
 */
 Route::get('/', 'FrontController@index');
-Route::get('contact', 'FrontController@contact');
+Route::get('admins', 'FrontController@admin');
 Route::get('reviews','FrontController@reviews');
+//Route::get('instructor/group','InstructorController@group');
+//Route::get('instructor','InstructorController@index');
+//Route::get('instructor/show','InstructorController@show');
+//Route::get('instructor/create','InstructorController@create');
+
 
 Route::resource('groups', 'GroupController');
+Route::resource('instructor/course', 'CourseController');
 Route::resource('users', 'UserController');
 Route::resource('practices', 'PracticeController');
 Route::resource('resources', 'ResourceController');
@@ -23,3 +29,4 @@ Route::resource('student','StudentController');
 Route::resource('instructor','InstructorController');
 Route::resource('login','LoginController');
 Route::resource('logout', 'LoginController@logout');
+

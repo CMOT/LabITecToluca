@@ -29,5 +29,6 @@ class Kernel extends HttpKernel
         'auth' => \labtectoluca\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \labtectoluca\Http\Middleware\RedirectIfAuthenticated::class,
+        'admin'=> \labtectoluca\Http\Middleware\Admin::class,
     ];
 }

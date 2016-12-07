@@ -5,11 +5,11 @@
 <section class="menu row">
     <section id="lista" class="col-xs-12 col-sm-4 col-md-2">
         <ul class="nav nav-pills nav-stacked">
-            <li> <a href="usuarios.php"><span class="icon-user3"></span>Usuarios</a></li>
-            <li> <a href="grupos.php"><span  class="icon-organization"></span>Grupos</a></li>
-            <li> <a href="practicas.php"><span class="icon-steam"></span>Pr&aacute;cticas</a></li>
+            <li> <a href="users"><span class="icon-user3"></span>Usuarios</a></li>
+            <li> <a href="groups"><span  class="icon-organization"></span>Grupos</a></li>
+            <li> <a href="practices"><span class="icon-steam"></span>Pr&aacute;cticas</a></li>
             <li> <a href="#"><span class="icon-list5"></span>Temarios</a></li>
-            <li> <a href="recursos.php"><span class="icon-books"></span>Materiales</a></li>
+            <li> <a href="resources"><span class="icon-books"></span>Materiales</a></li>
             <li> <a href="#"><span class="icon-users"></span>Foros</a></li>
 
         </ul>

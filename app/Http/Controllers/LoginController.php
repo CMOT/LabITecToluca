@@ -40,10 +40,14 @@ class LoginController extends Controller
     public function store(LoginRequest $request)
     {
         if(Auth::attempt(['email'=> $request['email'], 'password'=>$request['password']])){
-            return Redirect::to('admin');
-        }else{
-            return Redirect::to('/');
+            if(Auth::user()->rol == 'Admin'){
+                return redirect()->to('admin');
+            }else{
+                return redirect()->to('instructor');
+            }
         }
+        Session::flash('message-error', 'El usuario o contraseña son incorrectos!');
+        return Redirect::to('/');
     }
     
     public function logout(){

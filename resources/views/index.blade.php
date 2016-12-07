@@ -45,7 +45,7 @@
 
                             <div class="collapse navbar-collapse" id="miMenu">
                                 <ul class="nav navbar-nav">
-                                    <li><a id="nada" class="btn btn-ifno" data-toggle="modal" data-target="#ingreso" > Ingresar</a> </li>
+                                    <li><a id="nada" class="btn btn-ifno"> Ingresar</a> </li>
 
                                     <li><a class="btn btn-ifno" data-toggle="modal" data-target="#registro">Registro </a></li>
                                     <li><a href="pages/archi.php">Conócenos</a></li>
@@ -69,58 +69,6 @@
                                                                                     INICIO DE SESIÓN
     ========================================================================================= -->
 
-    <div class="modal fade" id="ingreso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- ========================= HEADER ============================-->
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="ture">&times;</button>
-                    <h4>INICIO DE SESIÓN</h4>
-                </div>
-                <!-- ========================= BODY ============================-->
-                <div class="model-body ">
-                    <div id="contenedor">
-                        <section id="intro">
-                            {!!Form::open(['route'=>'login.store', 'method'=>'POST'])!!}
-                            <div class="form-group">
-                                {!!Form::label('correo','Correo electrónico:')!!}	
-                                {!!Form::email('email',null,['class'=>'form-control', 'placeholder'=>'Ingresa tu correo'])!!}
-                            </div>
-                            <div class="form-group">
-                                {!!Form::label('contrasena','Contraseña:')!!}	
-                                {!!Form::password('password',['class'=>'form-control', 'placeholder'=>'Ingresa tu contraseña'])!!}
-                            </div>
-                            {!!Form::submit('Ingresar',['class'=>'btn btn-success'])!!}
-                            {!!Form::close()!!}
-<!--                            <form method="post" action="php/logeaUsuario.php">
-                                <table class="table" >			
-                                    <tr>
-                                        <td><img src="imagenes/users.png" width="20px" height="20px">&nbsp; Numero de control: </td>
-                                        <td><input id="" type="text" name="numero" maxlength="12"/></td>
-
-
-                                    </tr>								
-                                    <tr>									
-                                        <td><img src="imagenes/lock.png" width="15px" height="20px">&nbsp; Contraseña:</td>
-                                        <td><input id="" type="password" name="password" maxlength="20"></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2"><center><button type="submit" style="background:#337AB7; color:#FFF; border-radius:5px; height:35px;"><img src="imagenes/rocket.png" width="20px" height="20px">&nbsp;&nbsp;Ingresar</button></center></td>
-
-                                                                                                        <input id="ingreso" type="image" alt="asdasd" src="imagenes/rocket.png" value="Ingresar" class="btn btn-primary" /></center></td>
-                                    </tr>
-                                </table>
-                            </form>-->
-                        </section>
-                    </div>
-                </div>
-                <!-- ========================= FOOTER ============================-->
-                <div class="modal-footer">
-
-                </div>
-            </div>
-        </div>	
-    </div>
     <!-- ========================= regristroooooooooooo ============================-->
     <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -187,29 +135,70 @@
     <!--=========================================================================================
                                                                                     SLIDER
     ========================================================================================= -->
-    <div id="mySlide" class="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#mySlide" data-slide-to="0" class="active"></li>
-            <li data-target="#mySlide" data-slide-to="1"></li>
-        </ol>
+    <div class="container">
+        <section class="row margin-content">
 
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="images/Slider/brazo1.jpg" >
-            </div>
-            <div class="item">
-                <img src="images/Slider/brazo2.jpg" >
-            </div>
-        </div>
+            <article class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                <!--<center>-->
+                    <table class="table table-striped">
+                        <tr>
+                            @include('alerts.errors')
+                            @include('alerts.request')
+                        </tr>
+                        {!!Form::open(['route'=>'login.store', 'method'=>'POST'])!!}
+                        <tr>
+                            <td >
+                                <!--<div class="form-group">-->
+                                {!!Form::label('correo','Correo electrónico:')!!}	
+                            </td>
+                            <td colspan="3">
+                                {!!Form::email('email',null,['class'=>'form-control', 'placeholder'=>'Ingresa tu correo'])!!}
+                            </td>
+                            <!--                            </div>-->
+                            <!--<div class="form-group">-->
+                        </tr>
+<!--                                <tr rowspan="2"><td> </td></tr>-->
+                        <tr>
+                            <td>
+                                {!!Form::label('contrasena','Contraseña:')!!}	
+                            </td>
+                            <td colspan="3">
+                                {!!Form::password('password',['class'=>'form-control', 'placeholder'=>'Ingresa tu contraseña'])!!}
+                            </td>
+                            
+                        </tr>
+                        <!--</div>-->
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">
+                                    {!!Form::submit('Ingresar',['class'=>'btn btn-success'])!!}
+                                </td>
+                                <td>
+                                 <a href="#">Olvidaste tu contraseña?</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                        {!!Form::close()!!}
 
-        <a class="left carousel-control" href="#mySlide" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#mySlide" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+                    </table>
+                <!--</center>-->
+
+            </article>
+            <article class="body-content col-xs-12 col-sm-7 col-md-7 col-lg-8">
+
+                <hgroup><h2>Bienvenido a nuestro sitio web</h2></hgroup>
+                <p>
+                    Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. 
+                    Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
+                    cuando un impresor (N. del T. persona que se dedica a la imprenta) 
+                    desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
+                    <br>
+                    No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, 
+                    quedando esencialmente igual al original.
+                </p>
+            </article>
+        </section>
+        
     </div>
     <!--=========================================================================================
                                                                                     END SLAIDER
@@ -217,48 +206,51 @@
     <!--=========================================================================================
                                                                             CONTENT
 ========================================================================================= -->
+    <section id="wrap" class="container">
 
-    <section id="wrap">
+        <div id="mySlide" class="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mySlide" data-slide-to="0" class="active"></li>
+                <li data-target="#mySlide" data-slide-to="1"></li>
+            </ol>
 
-        <section id="main">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/Slider/brazo1.jpg" >
+                </div>
+                <div class="item">
+                    <img src="images/Slider/brazo2.jpg" >
+                </div>
+            </div>
 
-
-            <section id="bienvenidos">
-                <article>
-                    <hgroup><h2>Bienvenido a nuestro sitio web</h2></hgroup>
-                    <p>
-                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. 
-                        Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
-                        cuando un impresor (N. del T. persona que se dedica a la imprenta) 
-                        desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
-                        No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, 
-                        quedando esencialmente igual al original.
+            <a class="left carousel-control" href="#mySlide" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#mySlide" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <hr>
+        <section id="contenido" class="row margin-content">
+            <article>
+                <hgroup>
+                    <h2 class="titulo">
+                        Laboratorios Virtuales y Remotos
+                    </h2>
+                    <p class="fecha"> 6 de abril de 2015</p>
+                    <img class= "thumb" src="images/art.jpg" alt="imagen 1">
+                    <p> 
+                        Los laboratorios virtuales y remotos hacen las cosas séan mucho más simples para los estudiantes. Es una gran ventaja ya que permite tener acceso sin demora y puedan acceder a todo el material necesario para completar las prácticas aplicadas .
                     </p>
-                </article>	
-            </section>
-
-            <section id="contenido">
-                <article>
-                    <hgroup>
-                        <h2 class="titulo">
-                            Laboratorios Virtuales y Remotos
-                        </h2>
-                        <p class="fecha"> 6 de abril de 2015</p>
-                        <img class= "thumb" src="images/art.jpg" alt="imagen 1">
-                        <p> 
-                            Los laboratorios virtuales y remotos hacen las cosas séan mucho más simples para los estudiantes. Es una gran ventaja ya que permite tener acceso sin demora y puedan acceder a todo el material necesario para completar las prácticas aplicadas .
-                        </p>
-                    </hgroup>
-                </article>
-            </section>
-
+                </hgroup>
+            </article>
         </section>
     </section>
     <!--=========================================================================================
                                                                                     END CONTENT
     ========================================================================================= -->
-
-
 
 </body>
 </html>

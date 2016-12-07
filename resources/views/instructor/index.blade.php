@@ -42,16 +42,25 @@
             <table class="table table-bordered table-hover">
                 <th>Nombre</th>
                 <th>Curso</th>
+                <th>Curso</th>  
+                <th>Curso</th>
+                <th>Curso</th>
+                @foreach($groups as $group)
                 <tr>
+                    <td>{{$group->title}}</td>
+                    <td>{{$group->subject}}</td>
+                    <td>{{$group->id_instructor}}</td>
+                    <td>{{$group->quantity}}</td>
+                    <td>
+                        {!!link_to_route('instructor.show', $title = 'Show details', $parameters = $group->id, $attributes = ['class'=>'btn btn-info'])!!}
+                    </td>
                 </tr>
+                @endforeach
             </table>
         </div>
 
     </div>
 </section>
-<a href='../../php/crear.php'><button class="botones">Acabar practica</button></a>
-<a href="camaraNueva.php">Entrar a la camara</a>
-<a href="planTrabajo.php">servidor</a>
 
 @stop
 

@@ -3,12 +3,20 @@
 namespace labtectoluca\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use labtectoluca\Group;
 use labtectoluca\Http\Requests;
+use labtectoluca\Http\Requests\GroupCreateRequest;
 use labtectoluca\Http\Controllers\Controller;
 
 class GroupController extends Controller
 {
+    
+    public function __construct() {
+        $this->middleware('auth');
+        $this->middleware('admin', ['only'=>'index']);
+        
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +24,7 @@ class GroupController extends Controller
      */
     public function index()
     {
-        $groups = \labtectoluca\Group::all();
+        $groups = Group::all();
         return view("admin/groups/index", compact('groups'));
     }
 
@@ -36,9 +44,9 @@ class GroupController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(GroupCreateRequest $request)
     {
-        //
+        return $request->title;
     }
 
     /**
@@ -50,9 +58,10 @@ class GroupController extends Controller
     public function show($id)
     {
         $group = Group::find($id);
-//        $users = DB::table('users')->where('status', '=', 'A')->get();
+        $courses = DB::table('courses')->where('id_group', '=', $id)->get();
+//        $users = DB::table('')
 //        return view('instructor/groups/show', compact( 'group'));
-        return view('admin/groups/show', ['group'=>$group]);
+        return view('admin/groups/show', ['group'=>$group, $courses]);
     }
 
     /**
