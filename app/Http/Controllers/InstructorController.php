@@ -4,9 +4,14 @@ namespace labtectoluca\Http\Controllers;
 
 use Illuminate\Http\Request;
 use labtectoluca\Group;
+use labtectoluca\StudentGroup;
+use labtectoluca\User;
 use Auth;
 use DB;
+use Session;
+use Redirect;
 use labtectoluca\Http\Requests;
+use labtectoluca\Http\Requests\CreateStudentRequest;
 use labtectoluca\Http\Controllers\Controller;
 
 class InstructorController extends Controller
@@ -44,9 +49,23 @@ class InstructorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateStudentRequest $request)
     {
-        //
+        $user= User::create([
+           'email'=>$request['email'],
+           'password'=>$request['password'],
+           'rol'=>'Student',
+           'status'=>'N',
+        ]);
+        StudentGroup::create([
+            'id_student'=>$user['id'],
+            'id_group'=>$request['id'],
+        ]);
+        
+        Session::flash('message', 'Alumno agregado al grupo correctamente');
+        return $this->show($request['id']);
+        
+        
     }
 
     /**
@@ -59,10 +78,15 @@ class InstructorController extends Controller
     {
             $group = Group::find($id);
             $courses = DB::table('courses')->where('id_group', '=', $id)->get();
+            $students = DB::table('users')
+                    ->join('student_groups', 'users.id', '=', 'student_groups.id_student')
+                    ->where('student_groups.id_group', '=', $id)
+                    ->select('users.*')
+                    ->get();
     //        $users = DB::table('')
     //        return view('instructor/groups/show', compact( 'group'));
 //            return view('admin/groups/show', ['group'=>$group, $courses]);
-         return view('instructor.groups.show', ['group'=>$group, 'courses'=>$courses]);
+         return view('instructor.groups.show', ['group'=>$group, 'courses'=>$courses, 'students'=>$students]);
     }
 
     /**

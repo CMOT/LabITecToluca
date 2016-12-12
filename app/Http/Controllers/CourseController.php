@@ -3,8 +3,12 @@
 namespace labtectoluca\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
+use Redirect;
+use DB;
 use labtectoluca\Course;
 use labtectoluca\Http\Requests;
+use labtectoluca\Http\Requests\CourseCreateRequest;
 use labtectoluca\Http\Controllers\Controller;
 
 class CourseController extends Controller
@@ -35,9 +39,15 @@ class CourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CourseCreateRequest $request)
     {
-        //
+        Course::create([
+            'title'=>$request['title'],
+            'description'=>$request['description'],
+            'id_group'=>$request['id'],
+        ]);
+        Session::flash('message', 'Se creó el curso correctamente');
+        return Redirect::to('/instructor' );
     }
 
     /**
@@ -49,7 +59,9 @@ class CourseController extends Controller
     public function show($id)
     {
         $course = Course::find($id);
-        return view('instructor.courses.show',['course'=>$course]);
+        $sections = DB::table('sections')->where('id_course', '=', $id)->get();
+        
+        return view('instructor.courses.show',['course'=>$course, 'sections'=>$sections]);
         
     }
 

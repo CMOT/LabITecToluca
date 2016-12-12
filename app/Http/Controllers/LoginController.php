@@ -43,7 +43,11 @@ class LoginController extends Controller
             if(Auth::user()->rol == 'Admin'){
                 return redirect()->to('admin');
             }else{
-                return redirect()->to('instructor');
+                if(Auth::user()->rol == 'Student'){
+                    return redirect()->to('student');
+                }else{
+                    return redirect()->to('instructor');
+                }
             }
         }
         Session::flash('message-error', 'El usuario o contraseña son incorrectos!');

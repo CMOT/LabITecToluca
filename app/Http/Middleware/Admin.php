@@ -25,7 +25,12 @@ class Admin
         if($this->auth->user()->rol!= 'Admin'){
 //            return redirect()->to('/users/index');
 //        }else{
-            return redirect()->to('/instructor');
+            if($this->auth->user()->rol!= 'Instructor'){
+                return redirect()->to('/instructor');
+            }else{
+                return redirect()->to('/student');
+            }
+            
         }
         return $next($request);
     }

@@ -4,7 +4,10 @@ namespace labtectoluca\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Session;
+use Redirect;
 use labtectoluca\Group;
+use labtectoluca\User;
 use labtectoluca\Http\Requests;
 use labtectoluca\Http\Requests\GroupCreateRequest;
 use labtectoluca\Http\Controllers\Controller;
@@ -24,8 +27,16 @@ class GroupController extends Controller
      */
     public function index()
     {
-        $groups = Group::all();
-        return view("admin/groups/index", compact('groups'));
+        
+
+//        $users= DB::table('users')->where('status', '=', 'A')->get();
+        $users = DB::table('users')->where('rol', '=','Instructor')->get();
+//        $groups = Group::all();
+        $groups = DB::table('users')
+            ->join('groups', 'users.id', '=', 'groups.id_instructor')
+            ->select('groups.*', 'users.name', 'users.first_name')
+            ->get();
+        return view("admin/groups/index",['groups'=>$groups, 'users'=>$users]);
     }
 
     /**
@@ -46,7 +57,14 @@ class GroupController extends Controller
      */
     public function store(GroupCreateRequest $request)
     {
-        return $request->title;
+        $group = Group::create([
+            'title'=>$request['title'],
+            'subject'=>$request['subject'],
+            'quantity'=>$request['quantity'],
+            'id_instructor'=>$request['instructor'],
+        ]);
+        Session::flash('message','EL grupo ha sido creado con exito');
+        return Redirect::to('/groups');
     }
 
     /**

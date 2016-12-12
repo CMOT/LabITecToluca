@@ -4,13 +4,6 @@
         <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" > 
         <title>Instructor</title>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <!--		<link rel="stylesheet" href="../../Archivo/css/bootstrap.css">
-                        <link rel="stylesheet" href="../../Archivo/css/estilos.css">
-                        <link rel="stylesheet" href="../../css/estilo.css">
-                        <link rel="stylesheet" type="text/css" href="../../fonts/style.css">
-                        <link rel="stylesheet" type="text/css" href="../../fonts/font1/style.css">
-                        <script src="../../Archivo/js/jquery.js"></script>
-                        <script src="../../Archivo/js/bootstrap.js"></script>-->
         {!!Html::style('css/bootstrap.css')!!}
         {!!Html::style('css/estilos.css')!!}
         {!!Html::style('css/estilo.css')!!}
@@ -40,7 +33,7 @@
                         <ul id="menu1">
 
                             <li><a href="/logout"><span class="icon-enter"></span> Cerrar sesi&oacute;n </a></li>
-                            <li><a href=""> <span class="icon-user3"></span> {!!Auth::user()->name!!} </a></li>
+                            <li><a href=""> <span class="icon-user3"></span> {!!Auth::user()->name!!} {!!Auth::user()->first_name!!} {!!Auth::user()->last_name!!}</a></li>
 
                         </ul>
 

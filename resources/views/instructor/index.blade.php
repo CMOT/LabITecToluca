@@ -41,10 +41,10 @@
             </div>
             <table class="table table-bordered table-hover">
                 <th>Nombre</th>
-                <th>Curso</th>
-                <th>Curso</th>  
-                <th>Curso</th>
-                <th>Curso</th>
+                <th>Materia</th>
+                <th>Instructor</th>  
+                <th>Cantidad de alumno</th>
+                <th>Detalle</th>
                 @foreach($groups as $group)
                 <tr>
                     <td>{{$group->title}}</td>

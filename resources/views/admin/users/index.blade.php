@@ -29,6 +29,7 @@
             <br> <br> 
             <fieldset>
                 @include('alerts.success')
+                @include('alerts.errors')
                 @include('alerts.breadcomb')
 
                 <div class="panel panel-default">

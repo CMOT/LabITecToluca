@@ -40,7 +40,7 @@
                     
                     <div class="panel-heading">
                         <h3 >Grupos</h3>
-                        <button class="btn btn-info" ><a data-toggle="modal" data-target="#addGroup">Crear grupo </a></button>
+                        <a data-toggle="modal" data-target="#addGroup"><button class="btn btn-info" >Crear grupo </button></a>
                         
                     </div>
                     <div class="panel-body">
@@ -69,7 +69,7 @@
                                 <tr>
                                     <td>{{$group->title}}</td>
                                     <td>{{$group->subject}}</td>
-                                    <td>{{$group->id_instructor}}</td>
+                                    <td>{{$group->name}} {{$group->first_name}} </td>
                                     <td>{{$group->quantity}}</td>
                                     <td>
                                         <button class="btn btn-primary">Ver detalles</button>

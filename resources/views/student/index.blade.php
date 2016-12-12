@@ -15,16 +15,16 @@
 <div id="pantalla" class="col-xs-12 col-sm-8 col-md-10">			
     <div class="columna_izq not">	
         <div class="titulo_columna">
-            <h3>Actividad Reciente</h3>
+            <h3>Actividades pendientes</h3>
         </div>
     </div>
     <div class ="columna_der not">
         <div class="titulo_columna">
             <h3>Avisos <span class="icon-bullhorn"></span></h3>
         </div>
-        <textarea placeholder="Asunto" name="asunto" style="height: 28px; width: 100%; resize: none;"></textarea>
+<!--        <textarea placeholder="Asunto" name="asunto" style="height: 28px; width: 100%; resize: none;"></textarea>
         <textarea title="Crear aviso"  name="mensaje" placeholder="Crear aviso"  style="height: 63px; width: 100%; resize: none;"></textarea>
-        <input type="submit"  value="Enviar aviso"/>
+        <input type="submit"  value="Enviar aviso"/>-->
 
         <div class="contenido">
 

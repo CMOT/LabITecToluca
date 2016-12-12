@@ -17,7 +17,7 @@
                                             {!!Form::label('Nombre de grupo:')!!}
                                     </td>
                                     <td>
-                                        {!!Form::text('title', null, ['class'=>'input-sm', 'placeholder'=>'Ingrese el nombre'])!!}
+                                        {!!Form::text('title', null, ['class'=>'input-sm', 'placeholder'=>'Titulo del grupo'])!!}
                                     </td>
                                 </tr>
                                 <tr >
@@ -25,7 +25,7 @@
                                         {!!Form::label('Asignatura:')!!}
                                     </td>
                                     <td>
-                                        {!!Form::text('subject', null, ['class'=>'input-sm', 'placeholder'=>'Ingrese el apellido paterno'])!!}
+                                        {!!Form::text('subject', null, ['class'=>'input-sm', 'placeholder'=>'Asignatura'])!!}
                                     </td>
                                 </tr>
                                 <tr >
@@ -33,7 +33,7 @@
                                         {!!Form::label('Cupo máximo:')!!}
                                     </td>
                                     <td>
-                                        {!!Form::email('quantity', null, ['class'=>'input-sm', 'placeholder'=>'example@gmail.com'])!!}
+                                        {!!Form::number('quantity', null, ['class'=>'input-sm', 'placeholder'=>'0'])!!}
                                     </td>
                                 </tr>
                                 <tr>
@@ -41,12 +41,20 @@
                                         {!!Form::label('Seleccione un instructor')!!}
                                     </td>
                                     <td>
-
+                                       
                                     </td>
                                 </tr>
                                 <tr >
                                     <td rowspan="2">
-                                        {!!Form::text('instructor', null, ['class'=>'input-sm', 'placeholder'=>'Seleccionar instructor'])!!}
+                                        <select name="instructor">
+                                        @foreach($users as $user)
+                                        
+                                            <option value="{{$user->id}}" label="{{$user->name}} {{$user->first_name}} {{$user->last_name}}"></option>
+                                        
+                                         <!--{!!Form::select('Instructor', [$user->name=>$user->name])!!}-->
+                                         @endforeach
+                                         </select>
+                                        <!--{!!Form::text('instructor', null, ['class'=>'input-sm', 'placeholder'=>'Seleccionar instructor'])!!}-->
                                     </td>
                                     
                                     <td rowspan="2">
