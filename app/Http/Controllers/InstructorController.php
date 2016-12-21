@@ -29,7 +29,11 @@ class InstructorController extends Controller
     public function index()
     {
         $idInstructor= Auth::user()->id;
-        $groups = DB::table('groups')->where('id_instructor', '=', $idInstructor )->get();
+        $groups = DB::table('groups')
+                ->leftJoin('courses', 'groups.id', '=', 'courses.id_group')
+                ->where('id_instructor', '=', $idInstructor )
+                ->select('groups.*', 'courses.title as course')
+                ->get();
         return view('instructor.index', compact('groups'));
     }
 
@@ -51,14 +55,20 @@ class InstructorController extends Controller
      */
     public function store(CreateStudentRequest $request)
     {
-        $user= User::create([
+        $exist = DB::table('users')->where('email', '=', $request['email'])->get();
+        if(is_null($exist) || empty($exist)){
+            $user= User::create([
            'email'=>$request['email'],
            'password'=>$request['password'],
            'rol'=>'Student',
            'status'=>'N',
-        ]);
+            ]);
+        }else{
+            $user = $exist[0];
+        }
+        
         StudentGroup::create([
-            'id_student'=>$user['id'],
+            'id_student'=>$user->id,
             'id_group'=>$request['id'],
         ]);
         

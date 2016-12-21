@@ -64,8 +64,7 @@
                                     <td>{{$resource->description}}</td>
                                     <td>
                                         <button class="btn btn-primary">Ver detalles</button>
-                                        <button class="btn btn-warning">Editar usuario</button>
-                                        <button class="btn btn-danger">Eliminar</button>
+                                        <button class="btn btn-warning">Editar material</button>
                                     </td>
                                 </tr>
                                 @endforeach

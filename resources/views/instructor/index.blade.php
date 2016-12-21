@@ -16,11 +16,11 @@
     </section>
 
     <div id="pantalla" class="col-xs-12 col-sm-8 col-md-10">			
-        <div class="columna_izq not">	
+        <div class="columna_izq not col-xs-12 col-sm-12 col-md-5 col-lg-5">	
             <div class="titulo_columna">
                 <h3>Actividad Reciente <img src="../../imagenes/acitividad.jpg" width="20px" height="20px"></h3>
             </div>
-            <div class="contenido">
+<!--            <div class="contenido">
 
                 <div class="titulo"><p> </p> </div>
                 <div class="titulo"><p></p> </div>
@@ -31,25 +31,26 @@
 
                 </div>
 
-            </div>
+            </div>-->
 
-            <a href="#"><h3>Ver m&aacute;s</h3></a>
+            <!--<a href="#"><h3>Ver m&aacute;s</h3></a>-->
         </div>
-        <div class ="columna_der not">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class ="columna_der not col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="titulo_columna" id="fuente1">
                 <h3>Grupos <span  class="icon-organization"></span></h3>
             </div>
             <table class="table table-bordered table-hover">
-                <th>Nombre</th>
+                <th>Grupo</th>
                 <th>Materia</th>
-                <th>Instructor</th>  
+                <th>Curso</th>  
                 <th>Cantidad de alumno</th>
                 <th>Detalle</th>
                 @foreach($groups as $group)
                 <tr>
                     <td>{{$group->title}}</td>
                     <td>{{$group->subject}}</td>
-                    <td>{{$group->id_instructor}}</td>
+                    <td>{{$group->course}}</td>
                     <td>{{$group->quantity}}</td>
                     <td>
                         {!!link_to_route('instructor.show', $title = 'Show details', $parameters = $group->id, $attributes = ['class'=>'btn btn-info'])!!}

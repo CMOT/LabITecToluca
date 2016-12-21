@@ -39,15 +39,12 @@
 
 }
 .columna_der{
-	float: right;
-	width: 39%;
+	
 	height: auto;
 	background: #E9EAED;
 
 }
 .columna_izq{
-	float: left;
-	width: 60%;
 	height: auto;
 	background: #E9EAED;
 	margin-bottom: 5%;

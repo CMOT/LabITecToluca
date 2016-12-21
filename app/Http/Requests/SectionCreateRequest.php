@@ -4,7 +4,7 @@ namespace labtectoluca\Http\Requests;
 
 use labtectoluca\Http\Requests\Request;
 
-class CreateStudentRequest extends Request
+class SectionCreateRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,10 @@ class CreateStudentRequest extends Request
     public function rules()
     {
         return [
-            'email' => 'required',
-            'password'=>'required',
+            'title'=>'required',
+            'description'=>'required',
+            'start_date'=>'required',
+            'end_date'=>'required',
         ];
     }
 }

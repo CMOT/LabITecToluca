@@ -4,16 +4,14 @@ namespace labtectoluca\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Session;
-use Redirect;
 use DB;
-use labtectoluca\Course;
+use Redirect;
 use labtectoluca\Section;
 use labtectoluca\Http\Requests;
 use labtectoluca\Http\Requests\SectionCreateRequest;
-use labtectoluca\Http\Requests\CourseCreateRequest;
 use labtectoluca\Http\Controllers\Controller;
 
-class CourseController extends Controller
+class SectionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,17 +20,17 @@ class CourseController extends Controller
      */
     public function index()
     {
-        return view('instructor.courses.index');
+        //
     }
 
     /**
      * Show the form for creating a new resource.
-     *@param  \Illuminate\Http\Request  $request
+     *
      * @return \Illuminate\Http\Response
      */
-    public function create(SectionCreateRequest $request)
+    public function create()
     {
-         //
+        //
     }
 
     /**
@@ -41,17 +39,22 @@ class CourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CourseCreateRequest $request)
+    public function store(SectionCreateRequest $request)
     {
-        Course::create([
+        Section::create([
             'title'=>$request['title'],
             'description'=>$request['description'],
-            'id_group'=>$request['id'],
+            'start_date'=>$request['start_date'],
+            'end_date'=>$request['end_date'],
+            'status'=>'A',
+            'id_course'=>$request['id'],
         ]);
-        Session::flash('message', 'Se creó el curso correctamente');
-        return Redirect::to('/instructor' );
+        $id= $request['id'];
+        Session::flash('message', 'Se ha creado la sección correctamente');
+//        return Redirect::to('/instructor/' );
+        return Redirect::to('instructor/course/'.$request['id']);
     }
-    
+
     /**
      * Display the specified resource.
      *
@@ -60,23 +63,7 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-        $course = Course::find($id);
-        $sections = DB::table('sections')->where('id_course', '=', $id)->get();
-        $practices = DB::table('practices')->get();
-        foreach($sections as $sec){
-           $resources = DB::table('resources')
-                ->join('resource_sections', 'resources.id', '=', 'resource_sections.id_resource')
-                ->where('resource_sections.id_section', '=', $sec->id)
-                ->get();
-           $sec->resources=$resources;
-           $sec->practices= $practices;
-        }
-         
-//        $practices = DB::table('practices')->where('id_course', '=', $id)->get();
-        
-        
-        return view('instructor.courses.show',['course'=>$course, 'sections'=>$sections]);
-        
+        //
     }
 
     /**

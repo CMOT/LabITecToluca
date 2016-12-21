@@ -29,4 +29,5 @@ Route::resource('student','StudentController');
 Route::resource('instructor','InstructorController');
 Route::resource('login','LoginController');
 Route::resource('logout', 'LoginController@logout');
+Route::resource('course/section', 'SectionController');
 
