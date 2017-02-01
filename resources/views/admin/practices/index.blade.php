@@ -13,9 +13,6 @@
             <ul class="nav nav-pills nav-stacked">
 
                 <li> <a href="/users"><span class="icon-user3"></span>Usuarios</a></li>
-                <ul  class="desplegar">
-                    <li><a href="/users/create">Alta de instructor</a></li>
-                </ul>
                 <li> <a href="/groups"><span  class="icon-organization"></span>Grupos</a></li>
                 <li id="listaactual"> <a id="actual" href="/practices"><span class="icon-steam"></span>Pr&aacute;cticas</a></li>
                 <li> <a href="#"><span class="icon-list5"></span>Temarios</a></li>
@@ -65,7 +62,6 @@
                                     <td>
                                         <button class="btn btn-primary">Ver detalles</button>
                                         {!!link_to_route('practices.edit', $title = 'Editar', $parameters = $practice->id, $attributes = ['class'=>'btn btn-warning'])!!}
-                                        <button class="btn btn-danger">Eliminar</button>
                                     </td>
                                 </tr>
                                 @endforeach

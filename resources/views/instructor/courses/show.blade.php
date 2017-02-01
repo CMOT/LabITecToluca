@@ -98,6 +98,14 @@
                                                             </td>
                                                         </tr>
                                                         @endforeach
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td>
+                                                                    <a data-toggle="modal" data-target="#addMaterial"><button class="btn btn-info" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</button> </a>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                        </tfoot>
                                                     </table>
                                                     <h3>Prácticas</h3>
                                                     <table class="table table-striped">
@@ -128,12 +136,32 @@
                                                             </td>
                                                         </tr>
                                                         @endforeach
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td>
+                                                                    <a data-toggle="modal" ><button class="btn btn-info" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</button> </a>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                        </tfoot>
                                                     </table>
                                                 </div>
                                             </div>
                                         </td>
                                         
-                                    </tr>
+                                    <!--</tr>-->
+                                    <tfoot>
+                                        <tr>
+                                            <td>
+                                                {!!Form::open(['route'=>'users.store','method'=>'POST'])!!}
+                                                    @include('instructor.forms.dialogShowPractices')
+                                                {!!Form::close()!!}
+                                                {!!Form::open(['route'=>'users.store','method'=>'POST'])!!}
+                                                    @include('instructor.forms.dialogShowMaterials')
+                                                {!!Form::close()!!}
+                                            </td>
+                                        </tr>
+                                    </tfoot>
                                 @endforeach
                             </tbody>
                         </table>

@@ -33,14 +33,16 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+//        $users = User::all();
 //        $usr= \labtectoluca\User::with(['posts' => function($query)
 //
 //            $query->where('title', 'like', '%first%');
 //
 //        }])->get();
 //        $users= User::where('status' ,'A');
-//        $users= DB::table('users')->where('status', '=', 'A')->get();
+        $users= DB::table('users')->where('status', '=', 'A')
+                ->where( 'rol', '=', 'Instructor')
+                ->get();
         return view("admin/users/index", compact('users'));
     }
 
@@ -96,7 +98,6 @@ class UserController extends Controller
     public function edit($id)
     {
 //        $user= User::find($id);
-         
         return view('admin/users/edit', ['user'=>$this->user]);
     }
 

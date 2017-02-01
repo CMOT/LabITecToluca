@@ -8,6 +8,7 @@ use Redirect;
 use DB;
 use labtectoluca\Course;
 use labtectoluca\Section;
+use labtectoluca\ResourceSection;
 use labtectoluca\Http\Requests;
 use labtectoluca\Http\Requests\SectionCreateRequest;
 use labtectoluca\Http\Requests\CourseCreateRequest;
@@ -63,6 +64,7 @@ class CourseController extends Controller
         $course = Course::find($id);
         $sections = DB::table('sections')->where('id_course', '=', $id)->get();
         $practices = DB::table('practices')->get();
+        $materials = DB::table('resources')->get();
         foreach($sections as $sec){
            $resources = DB::table('resources')
                 ->join('resource_sections', 'resources.id', '=', 'resource_sections.id_resource')
@@ -75,7 +77,7 @@ class CourseController extends Controller
 //        $practices = DB::table('practices')->where('id_course', '=', $id)->get();
         
         
-        return view('instructor.courses.show',['course'=>$course, 'sections'=>$sections]);
+        return view('instructor.courses.show',['course'=>$course, 'sections'=>$sections, 'materials'=>$materials]);
         
     }
 

@@ -21,6 +21,7 @@ Route::get('reviews','FrontController@reviews');
 
 Route::resource('groups', 'GroupController');
 Route::resource('instructor/course', 'CourseController');
+Route::resource('resource/section', 'ResourceSectionController');
 Route::resource('users', 'UserController');
 Route::resource('practices', 'PracticeController');
 Route::resource('resources', 'ResourceController');
@@ -30,4 +31,5 @@ Route::resource('instructor','InstructorController');
 Route::resource('login','LoginController');
 Route::resource('logout', 'LoginController@logout');
 Route::resource('course/section', 'SectionController');
+
 

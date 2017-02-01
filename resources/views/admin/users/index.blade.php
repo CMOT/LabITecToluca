@@ -13,9 +13,6 @@
             <ul class="nav nav-pills nav-stacked">
 
                 <li id="listaactual"> <a id="actual" href="/users"><span class="icon-user3"></span>Usuarios</a></li>
-                <ul  class="desplegar">
-                    <li><a href="/users/create">Alta de instructor</a></li>
-                </ul>
                 <li> <a href="/groups"><span  class="icon-organization"></span>Grupos</a></li>
                 <li> <a href="/practices"><span class="icon-steam"></span>Pr&aacute;cticas</a></li>
                 <li> <a href="#"><span class="icon-list5"></span>Temarios</a></li>
@@ -28,13 +25,19 @@
         <div id="pantalla" class="col-xs-12 col-sm-8 col-md-10">			
             <br> <br> 
             <fieldset>
+                @include('alerts.request')
                 @include('alerts.success')
                 @include('alerts.errors')
                 @include('alerts.breadcomb')
-
+                
+                {!!Form::open(['route'=>'users.store','method'=>'POST'])!!}
+                    @include('admin/forms/addUser')
+                {!!Form::close()!!}
+            
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 >Instructores</h3>
+                        <a data-toggle="modal" data-target="#addUser" ><button class="btn btn-info">Agregar instructor</button></a>
                     </div>
                     <div class="panel-body">
 
