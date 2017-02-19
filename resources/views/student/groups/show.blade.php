@@ -62,7 +62,7 @@
                             {{$resource->description}}
                         </td>
                         <td>
-                            <a>Liga</a>
+                            <a href="/files/{{$resource->url}}">Descargar</a>
                         </td>
                     </tr>
                     @endforeach

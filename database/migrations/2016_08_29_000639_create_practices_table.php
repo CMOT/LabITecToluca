@@ -19,6 +19,8 @@ class CreatePracticesTable extends Migration
             $table->string('description');
             $table->string('url');
             $table->char('status');
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
 
         });
     }

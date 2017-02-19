@@ -93,15 +93,15 @@
                                                                 {{$resource->description}}
                                                             </td>
                                                             <td>
-                                                                <a href="">Link</a>
-                                                                {{$resource->url}}
+                                                                <a href="/files/{{$resource->url}}">Descargar</a>
+                                                                
                                                             </td>
                                                         </tr>
                                                         @endforeach
                                                         <tfoot>
                                                             <tr>
                                                                 <td>
-                                                                    <a data-toggle="modal" data-target="#addMaterial"><button class="btn btn-info" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</button> </a>
+                                                                    <a data-toggle="modal" data-target="#addMaterial"><button class="btn btn-info" disabled="true"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</button> </a>
                                                                 </td>
                                                             </tr>
                                                             
@@ -131,15 +131,15 @@
                                                                 {{$practice->description}}
                                                             </td>
                                                             <td>
-                                                                <a href="">Link</a>
-                                                                {{$practice->url}}
+                                                                <a href="/files/{{$practice->url}}">Descargar</a>
+                                                                
                                                             </td>
                                                         </tr>
                                                         @endforeach
                                                         <tfoot>
                                                             <tr>
                                                                 <td>
-                                                                    <a data-toggle="modal" ><button class="btn btn-info" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</button> </a>
+                                                                    <a data-toggle="modal" ><button class="btn btn-info" disabled="true" ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Agregar</button> </a>
                                                                 </td>
                                                             </tr>
                                                             
@@ -153,12 +153,9 @@
                                     <tfoot>
                                         <tr>
                                             <td>
-                                                {!!Form::open(['route'=>'users.store','method'=>'POST'])!!}
-                                                    @include('instructor.forms.dialogShowPractices')
-                                                {!!Form::close()!!}
-                                                {!!Form::open(['route'=>'users.store','method'=>'POST'])!!}
+                                                <!--{!!Form::open(['route'=>'resource.section.store','method'=>'POST'])!!}-->
                                                     @include('instructor.forms.dialogShowMaterials')
-                                                {!!Form::close()!!}
+                                                <!--{!!Form::close()!!}-->
                                             </td>
                                         </tr>
                                     </tfoot>
@@ -208,5 +205,6 @@
         </div>
     </section>
 </div>
+
 @stop
 

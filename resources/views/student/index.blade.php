@@ -4,9 +4,9 @@
 
 <section id="lista" class="col-xs-12 col-sm-4 col-md-2">
     <ul class="nav nav-pills nav-stacked">
-        <li> <a href="grupos.php"><span class="icon-organization"></span>&nbsp;Tareas</a></li>
-        <li> <a href="practicas.php"><span class="icon-steam" ></span>&nbsp;Pr&aacute;cticas</a></li>
-        <li> <a href="recursos.php"><span class="icon-books"></span>&nbsp;Materiales</a></li>
+        <li> <a href="#"><span class="icon-organization"></span>&nbsp;Tareas</a></li>
+        <li> <a href="#"><span class="icon-steam" ></span>&nbsp;Pr&aacute;cticas</a></li>
+        <li> <a href="#"><span class="icon-books"></span>&nbsp;Materiales</a></li>
         <li> <a href="#"><span class="icon-users"></span>&nbsp;Foros</a></li>
 
     </ul>

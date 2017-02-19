@@ -24,6 +24,7 @@ Route::resource('instructor/course', 'CourseController');
 Route::resource('resource/section', 'ResourceSectionController');
 Route::resource('users', 'UserController');
 Route::resource('practices', 'PracticeController');
+Route::resource('instructor/practices', 'InstructorPracticeController');
 Route::resource('resources', 'ResourceController');
 Route::resource('admin','AdminController');
 Route::resource('student','StudentController');

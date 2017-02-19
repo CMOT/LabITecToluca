@@ -38,6 +38,7 @@
                                             <td>{{$material->description}}</td>
                                             <td>{{$material->type}}</td>
                                             <td>
+                                                <!--{!!Form::submit('Agregar', ['class'=>'btn btn-success'])!!}-->
                                                 {!!link_to_route('resource.section.store', $title = 'Agregar', $parameters = ['idmaterial'=>$material->id, 'idsection'=>$section->id, 'idcourse'=>$section->id_course], $attributes = ['class'=>'btn btn-info'])!!}
                                                 <!--<button class="btn btn-danger">Eliminar</button>-->
                                             </td>

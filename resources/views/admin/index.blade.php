@@ -18,12 +18,12 @@
     <div id="pantalla" class="col-xs-12 col-sm-8 col-md-10">			
 
                                 <!--<iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:6AV1SULGwX3OFyYzoZqokN&theme=white" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>-->
-        <div class="columna_izq not">	
+        <div class="columna_izq not" >	
             <div class="titulo_columna">
                 <h3>Actividad Reciente</h3>
             </div>
 
-                <div class="contenido">
+<!--                <div class="contenido">
 
                     <div class="titulo"><p> </p> </div>
                     <div class="titulo"><p></p> </div>
@@ -33,14 +33,14 @@
                         <p><a href="#">Ver recu</a></p>
                     </div>
 
-                </div>
+                </div>-->
 
 
             <a href="#"><h3>Ver m&aacute;s</h3></a>
         </div>
         <div class ="columna_der not">
 
-            <a href='../../php/crear.php'><button class="botones">Acabar practica</button></a>
+            
         </div>
 </section>
 

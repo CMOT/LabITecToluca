@@ -2,12 +2,14 @@
 
 namespace labtectoluca\Http\Controllers;
 
-use labtectoluca\Resource;
 use Illuminate\Http\Request;
-use labtectoluca\Http\Requests\ResourceRequest;
+use DB;
+use labtectoluca\Practice;
+use labtectoluca\Http\Requests\PracticeRequest;
+use labtectoluca\Http\Requests;
 use labtectoluca\Http\Controllers\Controller;
 
-class ResourceController extends Controller
+class InstructorPracticeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +18,14 @@ class ResourceController extends Controller
      */
     public function index()
     {
-        $resources =  Resource::all();
-        return view("admin.resources/index", compact('resources'));
+//        $practices = Practice::all();
+//        $practices = DB::table('practices')
+//                ->join('', '=', '')
+//                ->where('id_', '=','' )
+//                ->get();
+//        return view('instructor/practices/index', compact('practices'));
+        $practices = Practice::all();
+        return view('instructor/practices/index', compact('practices'));
     }
 
     /**
@@ -36,9 +44,9 @@ class ResourceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ResourceRequest $request)
+    public function store(PracticeRequest $request)
     {
-        Resource::create($request->all());
+        Practice::create($request->all());
         return $this->index();
     }
 

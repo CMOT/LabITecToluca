@@ -1,17 +1,17 @@
 
-<div class="modal fade" id="addMaterial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="addPractice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <!-- ========================= HEADER ============================-->
-           <div class="modal-header">
+            <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="ture">&times;</button>
-                <h4>Agregar recurso</h4>
+                <h4>Agregar prácticas</h4>
             </div>
             <!-- ========================= BODY ============================-->
             <div class="model-body ">
                 <div class="container-fluid">
                     <section class="row">
-                            <table id="table-reso" class="table table-striped margen-general" >
+                            <table class="table table-striped margen-general" >
                                 <tr>
                                     <td>
                                             {!!Form::label('Título:')!!}
@@ -39,7 +39,7 @@
                                 <tr>
                                     <td rowspan="2">
                                          {!!Form::submit('Guardar', ['class'=>'btn btn-success'])!!}
-                                        {!!link_to_route('resources.index', $title = 'Cancelar', $parameters = [], $attributes = ['class'=>'btn btn-danger']);!!}
+                                        {!!link_to_route('instructor.practices.index', $title = 'Cancelar', $parameters = [], $attributes = ['class'=>'btn btn-danger']);!!}
                                     </td>
                                 </tr>
                             </table>

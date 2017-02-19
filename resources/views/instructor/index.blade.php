@@ -6,7 +6,7 @@
     <section id="lista" class="col-xs-12 col-sm-4 col-md-2">
         <ul class="nav nav-pills nav-stacked">
 
-            <li> <a href="practicas.php"><span class="icon-steam"></span>Pr&aacute;cticas</a></li>
+            <li> <a href="/instructor/practices"><span class="icon-steam"></span>Pr&aacute;cticas</a></li>
             <li> <a href="#"><span class="icon-checklist"></span>Evaluaciones</a></li>
             <li> <a href="#"><span class="icon-graph"></span>Reportes y estad&iacute;sticas</a></li>
             <li> <a href="#"><span class="icon-users"></span>F&oacute;ros</a></li>

@@ -3,7 +3,8 @@
 namespace labtectoluca\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use labtectoluca\Course;
+use labtectoluca\ResourceSection;
 use labtectoluca\Http\Requests;
 use labtectoluca\Http\Controllers\Controller;
 
@@ -35,18 +36,38 @@ class ResourceSectionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($idmaterial, $idsection, $idcourse)
+    public function store(Request $request )
     {
+//        ,$idmaterial, $idsection, $idcourse
          ResourceSection::create([
-            'id_resource'=> $idmaterial,
-            'id_section'=> $idsection,
+            'id_resource'=> $request['idmatetial'],
+            'id_section'=> $request['idsection'],
         ]);
-         echo 'idMaterial: '.$idmaterial;
-         echo 'id_section: '.$idsection;
-         echo 'idcourse: '.$idcourse;
         Session::flash('message','Se agregó el nuevo material a la sección');
-        return Redirect::to('instructor.course.show', ['id'=>$idcourse]);
+        return view('instructor.courses.show');
     }
+    
+    private function backto($idcourse){
+        $course = Course::find($idcourse);
+        $sections = DB::table('sections')->where('id_course', '=', $id)->get();
+        $practices = DB::table('practices')->get();
+        $materials = DB::table('resources')->get();
+        foreach($sections as $sec){
+           $resources = DB::table('resources')
+                ->join('resource_sections', 'resources.id', '=', 'resource_sections.id_resource')
+                ->where('resource_sections.id_section', '=', $sec->id)
+                ->get();
+           $sec->resources=$resources;
+           $sec->practices= $practices;
+        }
+         
+//        $practices = DB::table('practices')->where('id_course', '=', $id)->get();
+        
+        
+        return view('instructor.courses.show',['course'=>$course, 'sections'=>$sections, 'materials'=>$materials]);
+        
+    }
+    
 
     /**
      * Display the specified resource.

@@ -11,25 +11,25 @@
     <section class="menu row">
         <section id="lista" class="col-xs-12 col-sm-4 col-md-2">
             <ul class="nav nav-pills nav-stacked">
-
-                <li> <a href="/users"><span class="icon-user3"></span>Usuarios</a></li>
-                <li> <a href="/groups"><span  class="icon-organization"></span>Grupos</a></li>
-                <li> <a href="/practices"><span class="icon-steam"></span>Pr&aacute;cticas</a></li>
-                <li> <a href="#"><span class="icon-list5"></span>Temarios</a></li>
-                <li id="listaactual"> <a id="actual" href="/resources"><span class="icon-books"></span>Materiales</a></li>
-                <li> <a href="#"><span class="icon-users"></span>Foros</a></li>
-
+                <li id="listaactual"> <a id="actual" href="/instructor/practices"><span class="icon-steam"></span>Pr&aacute;cticas</a></li>
+                <li id="listaactual"> <a id="actual" href="/instructor/resources"><span class="icon-books"></span>Materiales</a></li>
+                <li> <a href="#"><span class="icon-checklist"></span>Evaluaciones</a></li>
+                <li> <a href="#"><span class="icon-graph"></span>Reportes y estad&iacute;sticas</a></li>
+                <li> <a href="#"><span class="icon-users"></span>F&oacute;ros</a></li>
             </ul>
         </section>
-         {!!Form::open(['route'=>'resources.store','method'=>'POST', 'files'=> true])!!}
-            @include('admin.forms.dialogCreateResource')
+         {!!Form::open(['route'=>'practices.store','method'=>'POST', 'files'=> true])!!}
+            @include('instructor.forms.dialogCreateResource')
         {!!Form::close()!!}
         <div id="pantalla" class="col-xs-12 col-sm-8 col-md-10">			
             <br> <br> 
             <fieldset>
-                @include('alerts.request')
-                @include('alerts.success')
-                @include('alerts.errors')
+                @if($message == 'store')
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    El archivo ha sido agregado exitosamente
+                </div>
+                @endif
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -50,9 +50,6 @@
                                 Descripcion:
                             </th>
                             <th>
-                                Link de descarga
-                            </th>
-                            <th>
                                 Operaciones
                             </th>
                             </thead>
@@ -63,12 +60,8 @@
                                     <td>{{$resource->title}}</td>
                                     <td>{{$resource->description}}</td>
                                     <td>
-                                        @if(!empty($resource->url))
-                                        <a href="/files/{{$resource->url}}"><button class="btn btn-success">Descargar</button></a>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-warning" disabled="true">Editar </button>
+                                        <button class="btn btn-primary">Ver detalles</button>
+                                        <button class="btn btn-warning">Editar material</button>
                                     </td>
                                 </tr>
                                 @endforeach

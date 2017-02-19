@@ -33,7 +33,7 @@
                         <ul id="menu1">
 
                             <li><a href="/logout"><span class="icon-enter"></span> Cerrar sesi&oacute;n </a></li>
-                            <li><a href=""> <span class="icon-user3"></span> {!!Auth::user()->name!!} {!!Auth::user()->first_name!!} {!!Auth::user()->last_name!!}</a></li>
+                            <li><a href="#"> <span class="icon-user3"></span> {!!Auth::user()->name!!} {!!Auth::user()->first_name!!} {!!Auth::user()->last_name!!}</a></li>
 
                         </ul>
 
@@ -60,7 +60,7 @@
                                     <ul class="nav navbar-nav">
 
                                         <li class="divider-vertical"></li>
-                                        <li><a href="../perfil.php?tipo=admin"><span class="icon-user3"></span> Perfil</a></li>
+                                        <li><a href="#"><span class="icon-user3"></span> Perfil</a></li>
                                         <li class="divider-vertical"></li>
                                         <li><a href="#"><span class="icon-tools"></span>Configuraci&oacute;n</a></li>
                                         <li class="divider-vertical"></li>

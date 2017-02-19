@@ -2,12 +2,12 @@
 
 namespace labtectoluca\Http\Controllers;
 
-use labtectoluca\Resource;
 use Illuminate\Http\Request;
-use labtectoluca\Http\Requests\ResourceRequest;
+
+use labtectoluca\Http\Requests;
 use labtectoluca\Http\Controllers\Controller;
 
-class ResourceController extends Controller
+class InstructorResourceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,7 @@ class ResourceController extends Controller
      */
     public function index()
     {
-        $resources =  Resource::all();
-        return view("admin.resources/index", compact('resources'));
+        //
     }
 
     /**
@@ -36,10 +35,9 @@ class ResourceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ResourceRequest $request)
+    public function store(Request $request)
     {
-        Resource::create($request->all());
-        return $this->index();
+        //
     }
 
     /**
