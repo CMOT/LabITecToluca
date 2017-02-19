@@ -36,7 +36,7 @@
             
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 >Instructores</h3>
+                        <h3 >Usuarios</h3>
                         <a data-toggle="modal" data-target="#addUser" ><button class="btn btn-info">Agregar instructor</button></a>
                     </div>
                     <div class="panel-body">
