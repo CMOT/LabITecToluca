@@ -24,7 +24,7 @@ class CreatePracticeSectionsTable extends Migration
             $table->integer('id_practice_detail')->unsigned();
             $table->foreign('id_practice_detail')->references('id')->on('practice_details');
             $table->integer('id_practice')->unsigned();
-            $table->foreign('id_practice')->references('id')->on('practice');
+            $table->foreign('id_practice')->references('id')->on('practices');
             $table->char('status', 1);
         });
     }
